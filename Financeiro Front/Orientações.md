@@ -57,7 +57,25 @@ Gerencie diferentes versões do Node.js com facilidade utilizando o **NVM (Node 
     ```  
 
 ---
+## <span style="background: linear-gradient(to left, orange, purple); -webkit-background-clip: text; color: transparent;">📦 **Instalação do Angular CLI**</span>  
+O Angular CLI é uma ferramenta essencial para criar, desenvolver e manter aplicações Angular.  
 
+1. **Instale o Angular CLI globalmente**:  
+    ```bash  
+    npm install -g @angular/cli  
+    ```  
+
+2. **Verifique a instalação**:  
+    ```bash  
+    ng version  
+    ```  
+
+3. **Atualize o Angular CLI** (se necessário):  
+    ```bash  
+    npm install -g @angular/cli@latest  
+    ```  
+
+---  
 ## <span style="background: linear-gradient(to right, orange, purple); -webkit-background-clip: text; color: transparent;">⚙️ **Configuração do Ambiente**</span>  
 Prepare seu ambiente de desenvolvimento para iniciar o projeto:  
 
