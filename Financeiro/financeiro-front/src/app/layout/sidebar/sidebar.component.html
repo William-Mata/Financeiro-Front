@@ -1,0 +1,55 @@
+<div class="d-flex flex-column flex-shrink-0 bg-degrade border border-secondary rounded h-100" style="width: 4.5rem;">
+  <!-- <button class="btn btn-dark" id="menu-toggle" (click)="alternarSidebar()"> <i class="fa fa-bars"></i></button> -->
+  <a href="/" class="d-block p-3 link-body-emphasis text-decoration-none" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Financeiro">
+    <img src="../../../assets/img/finance.png" width="24" height="24"/>
+  </a>
+  <ul class="nav nav-pills nav-flush flex-column mb-auto text-center">
+    <li class="nav-item">
+      <a class="nav-link active py-3 border-bottom rounded-0" routerLink="/dashboard" data-bs-toggle="tooltip" data-bs-placement="right" aria-label="DashBoard" data-bs-original-title="Dashboard">
+        <i class="fas fa-tachometer-alt" width="24" height="24"></i>
+      </a>
+    </li>
+    <li>
+      <a href="#" class="nav-link py-3 border-bottom rounded-0" data-bs-toggle="tooltip" data-bs-placement="right" aria-label="Despesa" data-bs-original-title="Despesa" routerLink="/despesa">
+        <i class="fas fa-money-bill-wave"></i>
+      </a>
+    </li>
+    <li>
+      <a href="#" class="nav-link py-3 border-bottom rounded-0" data-bs-toggle="tooltip" data-bs-placement="right" aria-label="Receita" data-bs-original-title="Receita" routerLink="/receita">
+        <i class="fas fa-coins"></i>
+      </a>
+    </li>
+    <li>
+      <a href="#" class="nav-link py-3 border-bottom rounded-0" data-bs-toggle="tooltip" data-bs-placement="right" aria-label="Conta Bancária" data-bs-original-title="Conta Bancária" routerLink="/conta-bancaria">
+        <i class="fas fa-university"></i>
+      </a>
+    </li>
+  </ul>
+  <div class="dropdown border-top">
+    <a href="#" class="d-flex align-items-center justify-content-center p-3 link-body-emphasis text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+      <img src="https://avatars.githubusercontent.com/u/50085652?v=4" alt="William" width="24" height="24" class="rounded-circle me-2">
+    </a>
+    <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser1">
+      <li>
+        <a class="dropdown-item" href="#">
+          <i class="fa fa-user rounded-circle me-2"></i>
+          Perfil
+        </a>
+      </li>
+      <li><hr class="dropdown-divider"></li>
+      <li>
+        <a class="dropdown-item" href="#"  (click)="alterarTema()">
+          <i class="fas fa-adjust me-2"></i>
+          <span class="ms-2" *ngIf="!isExpandido">Alterar Tema</span>
+        </a>
+      </li>
+      <li>
+        <a class="dropdown-item" href="#">
+          <i class="fa fa-arrow-left rounded-circle me-2"></i>
+          <span class="ms-2" *ngIf="!isExpandido">Sair</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+
