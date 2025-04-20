@@ -1,0 +1,75 @@
+/* You can add global styles to this file, and also import other style files */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.color-degrade-left{
+    background: linear-gradient(to left, rgb(255, 115, 0), purple); 
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.color-degrade-rigth{
+    background: linear-gradient(to right, rgb(255, 115, 0), purple);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.color-degrade-bottom{
+    background: linear-gradient(to bottom, rgb(255, 115, 0), purple); 
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.color-degrade-top{
+    background: linear-gradient(to top, rgb(255, 115, 0), purple); 
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.light-theme {
+    background-color: #ffffff;
+    color: #000000 !important;
+
+    a, caption {
+        color: #000000 !important;
+    }
+
+    .dropdown-menu {
+        background-color: #ffffff;
+    }
+}
+  
+.dark-theme {
+    background-color: #343a40;
+    color: #ffffff !important;
+    
+    a, caption {
+        color: #ffffff !important;
+    }
+
+    .dropdown-menu {
+        background-color: #343a40;
+    }
+
+    .modal-content {
+        background-color: #343a40;
+        color: #ffffff !important;
+    }
+}
+
+// .bg-degrade{
+//     background: linear-gradient(to bottom, rgb(255, 115, 0), rgb(128, 0, 128)); 
+// }
+
+
+
+table caption{
+    font-weight: bolder;
+    font-size: larger;
+}

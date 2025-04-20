@@ -1,0 +1,83 @@
+<div class="row d-flex flex-column align-items-center vh-100 m-0 px-3"> 
+    <div class="col-12 p-3 bg-opacity-25 bg-secondary bg-degrade border border-secondary rounded shadown my-3">
+        <h1>Despesa</h1>
+        <hr>
+        <a class="btn btn-primary" data-bs-toggle="modal" href="#modalCadastro" role="button">Cadastrar Despesa</a>
+    
+        <div class="modal fade modal-lg" id="modalCadastro" aria-hidden="true" aria-labelledby="modalCadastro" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="cadastroDespesaLabel">
+                           Cadastro Despesa
+                        </h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form class="row g-3" (ngSubmit)="cadastrarDespesa()" #formCadastroDespesa="ngForm">
+                            <div class="col-md-12">
+                                <label for="cadastroDescricao" class="form-label">Descrição</label>
+                                <input type="text" [(ngModel)]="despesa.descricao" class="form-control" id="cadastroDescricao" name="cadastroDescricao" required>
+                                <div class="invalid-feedback">
+                                   Informe uma descrição.
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="cadastroValor" class="form-label">Valor</label>
+                                <input type="text" [(ngModel)]="despesa.valor" class="form-control" id="cadastroValor" name="cadastroValor" required>
+                                <div class="invalid-feedback">
+                                    Informe um valor.
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="cadastroDataVencimento" class="form-label">Data Vencimento</label>
+                                <input type="date" [(ngModel)]="despesa.dataVencimento" class="form-control" id="cadastroDataVencimento" name="cadastroDataVencimento" required>
+                                <div class="invalid-feedback">
+                                    Informe um Data Vencimento.
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <button class="btn btn-primary" type="submit" (disabled)="formCadastroDespesa.invalid" data-bs-toggle="modal" data-bs-dismiss="#modalCadastro">Cadastrar</button>
+                            </div>
+                        </form>  
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+    </div>
+
+
+    <div class="col-12 table-responsive p-3 bg-opacity-25 bg-secondary bg-degrade border border-secondary rounded shadown">
+        <table class="table table-striped table-hover table-bordered table-light align-middle">
+            <thead class="table-light">
+                <!-- <caption>
+                    Despesas
+                </caption> -->
+                <tr>
+                    <th>Id</th>
+                    <th>Descrição</th>
+                    <th>Categoria</th>
+                    <th>Valor</th>
+                    <th>Data De Vencimento</th>
+                    <th>Data De Pagamento</th>
+                </tr>
+            </thead>
+            <tbody class="table-group-divider">
+               
+                <tr class="table-light" *ngFor="let item of despesas">
+                    <td>{{item.id}}</td>
+                    <td>{{item.descricao}}</td>
+                    <td>{{item.categoria}}</td>
+                    <td>{{item.valor}}</td>
+                    <td>{{item.dataVencimento}}</td>
+                    <td>{{item.dataPagamento}}</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                
+            </tfoot>
+        </table>
+    </div>
+</div>
