@@ -1,52 +1,52 @@
 <div class="d-flex flex-column flex-shrink-0 bg-degrade border border-secondary rounded h-100" style="width: 4.5rem;">
   <!-- <button class="btn btn-dark" id="menu-toggle" (click)="alternarSidebar()"> <i class="fa fa-bars"></i></button> -->
-  <a href="/" class="d-block p-3 link-body-emphasis text-decoration-none" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Financeiro">
-    <img src="../../../assets/img/finance.png" width="24" height="24"/>
+  <a class="d-block p-3 link-body-emphasis text-decoration-none" data-bs-toggle="tooltip" data-bs-placement="right" title="{{'TITLE' | translate}}">
+    <img src="../../../assets/img/finance.png" class="rounded" width="32" height="32"/>
   </a>
   <ul class="nav nav-pills nav-flush flex-column mb-auto text-center">
     <li class="nav-item">
-      <a class="nav-link active py-3 border-bottom rounded-0" routerLink="/dashboard" data-bs-toggle="tooltip" data-bs-placement="right" aria-label="DashBoard" data-bs-original-title="Dashboard">
-        <i class="fas fa-tachometer-alt" width="24" height="24"></i>
+      <a class="nav-link py-3 border-bottom border-top  rounded-0" data-bs-toggle="tooltip" data-bs-placement="right" title="{{ 'DASHBOARD' | translate}}" routerLink="/dashboard" routerLinkActive="active">
+        <mat-icon fontIcon="multiline_chart"></mat-icon>
       </a>
     </li>
     <li>
-      <a href="#" class="nav-link py-3 border-bottom rounded-0" data-bs-toggle="tooltip" data-bs-placement="right" aria-label="Despesa" data-bs-original-title="Despesa" routerLink="/despesa">
-        <i class="fas fa-money-bill-wave"></i>
+      <a class="nav-link py-3 border-bottom rounded-0" data-bs-toggle="tooltip" data-bs-placement="right" title="{{ 'DESPESA' | translate}}" routerLink="/despesa" routerLinkActive="active">
+        <mat-icon fontIcon="payments"></mat-icon>
       </a>
     </li>
     <li>
-      <a href="#" class="nav-link py-3 border-bottom rounded-0" data-bs-toggle="tooltip" data-bs-placement="right" aria-label="Receita" data-bs-original-title="Receita" routerLink="/receita">
+      <a class="nav-link py-3 border-bottom rounded-0" data-bs-toggle="tooltip" data-bs-placement="right" title="{{ 'RECEITA' | translate}}" routerLink="/receita" routerLinkActive="active">
         <i class="fas fa-coins"></i>
       </a>
     </li>
     <li>
-      <a href="#" class="nav-link py-3 border-bottom rounded-0" data-bs-toggle="tooltip" data-bs-placement="right" aria-label="Conta Bancária" data-bs-original-title="Conta Bancária" routerLink="/conta-bancaria">
-        <i class="fas fa-university"></i>
+      <a class="nav-link py-3 border-bottom rounded-0" data-bs-toggle="tooltip" data-bs-placement="right" title="{{'CONTA_BANCARIA' | translate }}" routerLink="/conta-bancaria" routerLinkActive="active">
+        <mat-icon fontIcon="account_balance"></mat-icon>
       </a>
     </li>
   </ul>
   <div class="dropdown border-top">
-    <a href="#" class="d-flex align-items-center justify-content-center p-3 link-body-emphasis text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+    <a class="d-flex align-items-center justify-content-center p-3 link-body-emphasis text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
       <img src="https://avatars.githubusercontent.com/u/50085652?v=4" alt="William" width="24" height="24" class="rounded-circle me-2">
     </a>
     <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser1">
       <li>
         <a class="dropdown-item" href="#">
           <i class="fa fa-user rounded-circle me-2"></i>
-          Perfil
+          {{'PERFIL' | translate}}
         </a>
       </li>
       <li><hr class="dropdown-divider"></li>
       <li>
-        <a class="dropdown-item" href="#"  (click)="alterarTema()">
+        <a class="dropdown-item" style="cursor: pointer;" (click)="alterarTema()">
           <i class="fas fa-adjust me-2"></i>
-          <span class="ms-2" *ngIf="!isExpandido">Alterar Tema</span>
+          <span class="ms-2" *ngIf="!isExpandido">{{'MUDAR_TEMA' | translate}}</span>
         </a>
       </li>
       <li>
         <a class="dropdown-item" href="#">
           <i class="fa fa-arrow-left rounded-circle me-2"></i>
-          <span class="ms-2" *ngIf="!isExpandido">Sair</span>
+          <span class="ms-2" *ngIf="!isExpandido">{{'SAIR' | translate}}</span>
         </a>
       </li>
     </ul>
