@@ -1,34 +1,34 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import {LoginComponent} from './pages/login/login.component';
-import { DespesaComponent } from "./pages/despesa/despesa.component";
 import { SidebarComponent } from "./layout/sidebar/sidebar.component";
-import { TranslateService } from '@ngx-translate/core';
+import { TraducaoService } from './core/services/translate/traducao.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
   imports: [
     RouterOutlet,
-    LoginComponent,
-    DespesaComponent,
-    SidebarComponent
+    SidebarComponent,
 ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
 
 export class AppComponent {
+  rotaAtual: string = '';
 
-  constructor(private translate: TranslateService) {
-    translate.addLangs(['en', 'pt', 'es']);
-    translate.setDefaultLang('pt');
-
-    const browserLang = translate.getBrowserLang();
-    const langToUse = browserLang && ['en', 'pt', 'es'].includes(browserLang) ? browserLang : 'pt';
-    translate.use(langToUse);
+  constructor(private traducaoService: TraducaoService, Router: Router) {
+    this.traducaoService.iniciarTraducao();
+    this.rotaAtual = Router.url
   }
 
-  trocarIdioma(lang: string) {
-    this.translate.use(lang);
+  ngOnInit() {
+    this.traducaoService.iniciarTraducao();
+    this.ocultarComponentes();
+  }
+
+  ocultarComponentes(): boolean {
+    console.log(this.rotaAtual);
+    return true;
   }
 }

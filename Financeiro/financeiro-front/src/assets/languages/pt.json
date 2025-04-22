@@ -1,0 +1,120 @@
+{
+    "TITLE": "Financeiro",
+
+    "DASHBOARD": "Dashboard",
+    "DESPESA": "Despesa",
+    "RECEITA": "Receita",
+    "CONTA_BANCARIA": "Conta Bancária",
+    "PERFIL": "Perfil",
+    "MUDAR_TEMA": "Mudar Tema",
+    "SAIR": "Sair",
+
+    "DESCRICAO": "Descrição",
+    "VALOR": "Valor",
+    "DATA_VENCIMENTO": "Data de Vencimento",
+    "DATA_PAGAMENTO": "Data de Pagamento",
+    "DATA_RECEBIMENTO": "Data de Recebimento",
+    "CATEGORIA": "Categoria",
+    "SUBCATEGORIA": "Subcategoria",
+    "STATUS": "Status",
+    
+    "SELECIONE_SUBCATEGORIA": "Selecione uma Subcategoria",
+
+    "CADASTRAR": "Cadastrar",
+    "SALVAR": "Salvar",
+    "EDITAR": "Editar",
+    "DELETAR": "Deletar",
+
+    "Pendente": "Pendente",
+    "Pago": "Pago",
+    "Vencido": "Vencido",
+
+    "Moradia": "Moradia",
+    "Aluguel/Hipoteca": "Aluguel/Hipoteca",
+    "Contas de serviços públicos": "Contas de serviços públicos",
+    "Condomínio": "Condomínio",
+    "Manutenção e reparos": "Manutenção e reparos",
+    
+    "Transporte": "Transporte",
+    "Combustível/Gasolina": "Combustível/Gasolina",
+    "Transporte público": "Transporte público",
+    "Seguro do carro": "Seguro do carro",
+    "Manutenção do veículo": "Manutenção do veículo",
+    
+    "Alimentação": "Alimentação",
+    "Compras de supermercado": "Compras de supermercado",
+    "Refeições fora de casa": "Refeições fora de casa",
+    "Lanches e petiscos": "Lanches e petiscos",
+    "Restaurantes": "Restaurantes",
+    
+    "Saúde": "Saúde",
+    "Seguro de saúde": "Seguro de saúde",
+    "Consultas médicas": "Consultas médicas",
+    "Medicamentos": "Medicamentos",
+    "Cuidados dentários": "Cuidados dentários",
+    
+    "Educação": "Educação",
+    "Mensalidades escolares": "Mensalidades escolares",
+    "Material escolar": "Material escolar",
+    "Cursos extracurriculares": "Cursos extracurriculares",
+    "Empréstimos estudantis": "Empréstimos estudantis",
+    
+    "Lazer e Entretenimento": "Lazer e Entretenimento",
+    "Cinema/Teatro": "Cinema/Teatro",
+    "Streaming": "Streaming",
+    "Viagens": "Viagens",
+    "Hobbies": "Hobbies",
+    
+    "Finanças Pessoais": "Finanças Pessoais",
+    "Taxas bancárias": "Taxas bancárias",
+    "Juros cartão de crédito": "Juros cartão de crédito",
+    "Investimentos": "Investimentos",
+    "Consultoria financeira": "Consultoria financeira",
+    
+    "Vestuário e Acessórios": "Vestuário e Acessórios",
+    "Roupas": "Roupas",
+    "Calçados": "Calçados",
+    "Acessórios pessoais": "Acessórios pessoais",
+    "Lavanderia": "Lavanderia",
+
+    "Salário e Renda Principal": "Salário e Renda Principal",
+    "Salário base": "Salário base",
+    "Comissões/Bônus": "Comissões/Bônus",
+    "Freelancer": "Freelancer",
+    "Pensão alimentícia": "Pensão alimentícia",
+
+    "Renda Passiva": "Renda Passiva",
+    "Juros": "Juros",
+    "Dividendos": "Dividendos",
+    "Aluguéis": "Aluguéis",
+    "Royalties": "Royalties",
+
+    "Vendas e Serviços": "Vendas e Serviços",
+    "Venda de produtos": "Venda de produtos",
+    "Serviços prestados": "Serviços prestados",
+    "Lucro de negócios próprios": "Lucro de negócios próprios",
+    "Vendas online": "Vendas online",
+
+    "Fundos de investimento": "Fundos de investimento",
+    "Títulos": "Títulos",
+    "Ganhos de capital": "Ganhos de capital",
+    "Previdência privada": "Previdência privada",
+
+    "Benefícios Sociais": "Benefícios Sociais",
+    "Seguro-desemprego": "Seguro-desemprego",
+    "Bolsa Família": "Bolsa Família",
+    "Subsídios": "Subsídios",
+    "Aposentadoria": "Aposentadoria",
+
+    "Rendas Extra": "Rendas Extra",
+    "Trabalhos temporários": "Trabalhos temporários",
+    "Freelancing adicional": "Freelancing adicional",
+    "Vendas de itens usados": "Vendas de itens usados",
+    "Presentes": "Presentes",
+
+    "Outras Fontes de Renda": "Outras Fontes de Renda",
+    "Leilões": "Leilões",
+    "Royalties de PI": "Royalties de PI",
+    "Parcerias de negócios": "Parcerias de negócios",
+    "Consultorias": "Consultorias"
+}

@@ -1,0 +1,120 @@
+{
+    "TITLE": "Finance",
+
+    "DASHBOARD": "Dashboard",
+    "DESPESA": "Expense",
+    "RECEITA": "Income",
+    "CONTA_BANCARIA": "Bank Account",
+    "PERFIL": "Profile",
+    "MUDAR_TEMA": "Change Theme",
+    "SAIR": "Logout",
+
+    "DESCRICAO": "Description",
+    "VALOR": "Value",
+    "DATA_VENCIMENTO": "Payment Due Date",
+    "DATA_PAGAMENTO": "Payment Date",
+    "DATA_RECEBIMENTO": "Payment Received Date",
+    "CATEGORIA": "Category",
+    "SUBCATEGORIA": "Subcategory",
+    "STATUS": "Status",
+
+    "SELECIONE_SUBCATEGORIA": "Select a Subcategory",
+
+    "CADASTRAR": "Register",
+    "SALVAR": "Save",
+    "EDITAR": "Edit",
+    "DELETAR": "Delete",
+
+    "Pendente": "Pending",
+    "Pago": "Paid",
+    "Vencido": "Overdue",
+
+    "Moradia": "Housing",
+    "Aluguel/Hipoteca": "Rent/Mortgage",
+    "Contas de serviços públicos": "Utilities bills",
+    "Condomínio": "Condo fees",
+    "Manutenção e reparos": "Maintenance and repairs",
+    
+    "Transporte": "Transportation",
+    "Combustível/Gasolina": "Fuel/Gasoline",
+    "Transporte público": "Public transportation",
+    "Seguro do carro": "Car insurance",
+    "Manutenção do veículo": "Vehicle maintenance",
+    
+    "Alimentação": "Food",
+    "Compras de supermercado": "Supermarket shopping",
+    "Refeições fora de casa": "Meals outside home",
+    "Lanches e petiscos": "Snacks and appetizers",
+    "Restaurantes": "Restaurants",
+    
+    "Saúde": "Health",
+    "Seguro de saúde": "Health insurance",
+    "Consultas médicas": "Medical consultations",
+    "Medicamentos": "Medicines",
+    "Cuidados dentários": "Dental care",
+    
+    "Educação": "Education",
+    "Mensalidades escolares": "School fees",
+    "Material escolar": "School supplies",
+    "Cursos extracurriculares": "Extracurricular courses",
+    "Empréstimos estudantis": "Student loans",
+    
+    "Lazer e Entretenimento": "Leisure and Entertainment",
+    "Cinema/Teatro": "Cinema/Theater",
+    "Streaming": "Streaming",
+    "Viagens": "Trips",
+    "Hobbies": "Hobbies",
+    
+    "Finanças Pessoais": "Personal Finances",
+    "Taxas bancárias": "Bank fees",
+    "Juros cartão de crédito": "Credit card interest",
+    "Investimentos": "Investments",
+    "Consultoria financeira": "Financial consulting",
+    
+    "Vestuário e Acessórios": "Clothing and Accessories",
+    "Roupas": "Clothes",
+    "Calçados": "Shoes",
+    "Acessórios pessoais": "Personal accessories",
+    "Lavanderia": "Laundry",
+
+    "Salário e Renda Principal": "Salary and Main Income",
+    "Salário base": "Base salary",
+    "Comissões/Bônus": "Commissions/Bonuses",
+    "Freelancer": "Freelancer",
+    "Pensão alimentícia": "Alimony",
+
+    "Renda Passiva": "Passive Income",
+    "Juros": "Interest",
+    "Dividendos": "Dividends",
+    "Aluguéis": "Rentals",
+    "Royalties": "Royalties",
+
+    "Vendas e Serviços": "Sales and Services",
+    "Venda de produtos": "Product sales",
+    "Serviços prestados": "Services rendered",
+    "Lucro de negócios próprios": "Own business profit",
+    "Vendas online": "Online sales",
+
+    "Fundos de investimento": "Investment funds",
+    "Títulos": "Bonds",
+    "Ganhos de capital": "Capital gains",
+    "Previdência privada": "Private pension",
+
+    "Benefícios Sociais": "Social Benefits",
+    "Seguro-desemprego": "Unemployment insurance",
+    "Bolsa Família": "Family Grant",
+    "Subsídios": "Subsidies",
+    "Aposentadoria": "Retirement",
+
+    "Rendas Extra": "Extra Income",
+    "Trabalhos temporários": "Temporary jobs",
+    "Freelancing adicional": "Additional freelancing",
+    "Vendas de itens usados": "Used item sales",
+    "Presentes": "Gifts",
+
+    "Outras Fontes de Renda": "Other Sources of Income",
+    "Leilões": "Auctions",
+    "Royalties de PI": "IP Royalties",
+    "Parcerias de negócios": "Business partnerships",
+    "Consultorias": "Consulting"
+}

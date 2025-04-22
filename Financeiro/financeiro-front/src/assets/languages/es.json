@@ -1,0 +1,120 @@
+{
+    "TITLE": "Finanzas",
+
+    "DASHBOARD": "Tablero",
+    "DESPESA": "Gasto",
+    "RECEITA": "Ingreso",
+    "CONTA_BANCARIA": "Cuenta Bancaria",
+    "PERFIL": "Perfil",
+    "MUDAR_TEMA": "Cambiar Tema",
+    "SAIR": "Cerrar Sesión",
+
+    "DESCRICAO": "Descripción",
+    "VALOR": "Valor",
+    "DATA_VENCIMENTO": "Fecha de Vencimiento",
+    "DATA_PAGAMENTO": "Fecha de Pago",
+    "DATA_RECEBIMENTO": "Fecha de Pago Recibido",
+    "CATEGORIA": "Categoría",
+    "SUBCATEGORIA": "Subcategoría",
+    "STATUS": "Estado",
+    
+    "SELECIONE_SUBCATEGORIA": "Selecciona una Subcategoría",
+
+    "CADASTRAR": "Registrar",
+    "SALVAR": "Ahorrar",
+    "EDITAR": "Editar",
+    "DELETAR": "Eliminar",
+
+    "Pendente": "Pendiente",
+    "Pago": "Pagado",
+    "Vencido": "Vencido",
+
+    "Moradia": "Vivienda",
+    "Aluguel/Hipoteca": "Alquiler/Hipoteca",
+    "Contas de serviços públicos": "Cuentas de servicios públicos",
+    "Condomínio": "Gastos de comunidad",
+    "Manutenção e reparos": "Mantenimiento y reparaciones",
+    
+    "Transporte": "Transporte",
+    "Combustível/Gasolina": "Combustible/Gasolina",
+    "Transporte público": "Transporte público",
+    "Seguro do carro": "Seguro de coche",
+    "Manutenção do veículo": "Mantenimiento del vehículo",
+    
+    "Alimentação": "Alimentación",
+    "Compras de supermercado": "Compras de supermercado",
+    "Refeições fora de casa": "Comidas fuera de casa",
+    "Lanches e petiscos": "Bocadillos y aperitivos",
+    "Restaurantes": "Restaurantes",
+    
+    "Saúde": "Salud",
+    "Seguro de saúde": "Seguro de salud",
+    "Consultas médicas": "Consultas médicas",
+    "Medicamentos": "Medicamentos",
+    "Cuidados dentários": "Cuidados dentales",
+    
+    "Educação": "Educación",
+    "Mensalidades escolares": "Matrículas escolares",
+    "Material escolar": "Material escolar",
+    "Cursos extracurriculares": "Cursos extracurriculares",
+    "Empréstimos estudantis": "Préstamos estudiantiles",
+    
+    "Lazer e Entretenimento": "Ocio y Entretenimiento",
+    "Cinema/Teatro": "Cine/Teatro",
+    "Streaming": "Streaming",
+    "Viagens": "Viajes",
+    "Hobbies": "Hobbies",
+    
+    "Finanças Pessoais": "Finanzas Personales",
+    "Taxas bancárias": "Comisiones bancarias",
+    "Juros cartão de crédito": "Intereses de tarjeta de crédito",
+    "Investimentos": "Inversiones",
+    "Consultoria financeira": "Consultoría financiera",
+    
+    "Vestuário e Acessórios": "Ropa y Accesorios",
+    "Roupas": "Ropa",
+    "Calçados": "Zapatos",
+    "Acessórios pessoais": "Accesorios personales",
+    "Lavanderia": "Lavandería",
+
+    "Salário e Renda Principal": "Salario e Ingreso Principal",
+    "Salário base": "Salario base",
+    "Comissões/Bônus": "Comisiones/Bonificaciones",
+    "Freelancer": "Freelancer",
+    "Pensão alimentícia": "Pensión alimenticia",
+
+    "Renda Passiva": "Ingreso Pasivo",
+    "Juros": "Intereses",
+    "Dividendos": "Dividendos",
+    "Aluguéis": "Alquileres",
+    "Royalties": "Regalías",
+
+    "Vendas e Serviços": "Ventas y Servicios",
+    "Venda de produtos": "Venta de productos",
+    "Serviços prestados": "Servicios prestados",
+    "Lucro de negócios próprios": "Ganancia de negocio propio",
+    "Vendas online": "Ventas en línea",
+
+    "Fundos de investimento": "Fondos de inversión",
+    "Títulos": "Bonos",
+    "Ganhos de capital": "Ganancias de capital",
+    "Previdência privada": "Pensión privada",
+
+    "Benefícios Sociais": "Beneficios Sociales",
+    "Seguro-desemprego": "Seguro de desempleo",
+    "Bolsa Família": "Subsidio familiar",
+    "Subsídios": "Subsidios",
+    "Aposentadoria": "Jubilación",
+
+    "Rendas Extra": "Ingresos Extra",
+    "Trabalhos temporários": "Trabajos temporales",
+    "Freelancing adicional": "Freelancing adicional",
+    "Vendas de itens usados": "Ventas de artículos usados",
+    "Presentes": "Regalos",
+
+    "Outras Fontes de Renda": "Otras Fuentes de Ingreso",
+    "Leilões": "Subastas",
+    "Royalties de PI": "Regalías de PI",
+    "Parcerias de negócios": "Asociaciones comerciales",
+    "Consultorias": "Consultorías"
+}
