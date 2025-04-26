@@ -24,10 +24,19 @@
     "SALVAR": "Ahorrar",
     "EDITAR": "Editar",
     "DELETAR": "Eliminar",
+    "CANCELAR": "Cancelar",
+    "PAGAR": "Pagar",
+    "RECEBER": "Recibir",
+    "ESTORNAR": "Reembolsar",
+    "OPCOES": "Opciones",
 
     "Pendente": "Pendiente",
     "Pago": "Pagado",
     "Vencido": "Vencido",
+
+    "TEXTOS_MODAL": {
+        "DELETAR_CONFIRMACAO": "¿Realmente desea eliminar el gasto?"
+    },
 
     "Moradia": "Vivienda",
     "Aluguel/Hipoteca": "Alquiler/Hipoteca",

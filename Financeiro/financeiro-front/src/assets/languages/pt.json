@@ -24,10 +24,19 @@
     "SALVAR": "Salvar",
     "EDITAR": "Editar",
     "DELETAR": "Deletar",
+    "CANCELAR": "Cancelar",
+    "PAGAR": "Pagar",
+    "RECEBER": "Receber",
+    "ESTORNAR": "Estornar",
+    "OPCOES": "Opções",
 
     "Pendente": "Pendente",
     "Pago": "Pago",
     "Vencido": "Vencido",
+
+    "TEXTOS_MODAL": {
+        "DELETAR_CONFIRMACAO": "Deseja realmente deletar a despesa?"
+    },
 
     "Moradia": "Moradia",
     "Aluguel/Hipoteca": "Aluguel/Hipoteca",
@@ -117,4 +126,5 @@
     "Royalties de PI": "Royalties de PI",
     "Parcerias de negócios": "Parcerias de negócios",
     "Consultorias": "Consultorias"
+
 }

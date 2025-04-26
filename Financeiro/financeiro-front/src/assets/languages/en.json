@@ -24,10 +24,19 @@
     "SALVAR": "Save",
     "EDITAR": "Edit",
     "DELETAR": "Delete",
+    "CANCELAR": "Cancel",
+    "PAGAR": "Pay",
+    "RECEBER": "Receive",
+    "ESTORNAR": "Refund",
+    "OPCOES": "Options",
 
     "Pendente": "Pending",
     "Pago": "Paid",
     "Vencido": "Overdue",
+
+    "TEXTOS_MODAL": {
+        "DELETAR_CONFIRMACAO": "Do you really want to delete the expense?"
+    },
 
     "Moradia": "Housing",
     "Aluguel/Hipoteca": "Rent/Mortgage",

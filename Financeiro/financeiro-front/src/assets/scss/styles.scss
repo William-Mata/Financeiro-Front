@@ -39,7 +39,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     background-color: #ffffff;
     color: #000000 !important;
 
-    a, caption {
+    a {
         color: #000000 !important;
     }
 
@@ -57,8 +57,16 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
         border-color: var(--bs-table-border-color);
     }
     
-    .dropdown-menu {
+    .dropdown-menu, 
+    .modal-content,  
+    div .mat-mdc-menu-content,  
+    div .mat-mdc-menu-content button span {
         background-color: #ffffff;
+        color: #000000 !important;
+    }
+
+    div .mat-mdc-menu-content button mat-icon {
+        color: #000000 !important;
     }
 }
   
@@ -66,7 +74,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     background-color: #343a40;
     color: #ffffff !important;
     
-    a, caption {
+    a {
         color: #ffffff !important;
     }
 
@@ -84,12 +92,16 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
         border-color: var(--bs-table-border-color);
     }
 
-    .dropdown-menu {
+    .dropdown-menu, 
+    .modal-content,  
+    div .mat-mdc-menu-content,  
+    div .mat-mdc-menu-content button span {
         background-color: #343a40;
+        color: #ffffff !important;
     }
 
-    .modal-content {
-        background-color: #343a40;
+    
+    div .mat-mdc-menu-content button mat-icon {
         color: #ffffff !important;
     }
 }
@@ -101,3 +113,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 // .bg-degrade{
 //     background: linear-gradient(to bottom, rgb(255, 115, 0), rgb(128, 0, 128)); 
 // }
+
+.toast-top-center {
+    top: 10px !important; /* Altere o valor conforme quiser */
+}
