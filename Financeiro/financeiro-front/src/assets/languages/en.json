@@ -10,10 +10,11 @@
     "SAIR": "Logout",
 
     "DESCRICAO": "Description",
-    "VALOR": "Value",
-    "DATA_VENCIMENTO": "Payment Due Date",
+    "VALOR": "Amount",
+    "VALOR_PAGO": "Amount Paid",
+    "DATA_VENCIMENTO": "Due Date",
     "DATA_PAGAMENTO": "Payment Date",
-    "DATA_RECEBIMENTO": "Payment Received Date",
+    "DATA_RECEBIMENTO": "Receipt Date",
     "CATEGORIA": "Category",
     "SUBCATEGORIA": "Subcategory",
     "STATUS": "Status",
@@ -29,13 +30,16 @@
     "RECEBER": "Receive",
     "ESTORNAR": "Refund",
     "OPCOES": "Options",
-
+    "CONSULTAR": "Search",
+    "LIMPAR_FILTROS": "Clear Filters",
+    
     "Pendente": "Pending",
     "Pago": "Paid",
     "Vencido": "Overdue",
 
     "TEXTOS_MODAL": {
-        "DELETAR_CONFIRMACAO": "Do you really want to delete the expense?"
+        "DELETAR_CONFIRMACAO": "Do you really want to delete the expense?",
+        "ESTORNAR_CONFIRMACAO": "Do you really want to refund the expense?"
     },
 
     "Moradia": "Housing",

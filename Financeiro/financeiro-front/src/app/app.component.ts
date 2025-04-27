@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
   imports: [
     RouterOutlet,
     SidebarComponent,
-],
+  ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

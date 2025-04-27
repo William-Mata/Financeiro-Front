@@ -1,27 +1,28 @@
 {
     "TITLE": "Finanzas",
 
-    "DASHBOARD": "Tablero",
+    "DASHBOARD": "Panel",
     "DESPESA": "Gasto",
     "RECEITA": "Ingreso",
     "CONTA_BANCARIA": "Cuenta Bancaria",
     "PERFIL": "Perfil",
     "MUDAR_TEMA": "Cambiar Tema",
-    "SAIR": "Cerrar Sesión",
+    "SAIR": "Salir",
 
     "DESCRICAO": "Descripción",
     "VALOR": "Valor",
+    "VALOR_PAGO": "Valor Pagado",
     "DATA_VENCIMENTO": "Fecha de Vencimiento",
     "DATA_PAGAMENTO": "Fecha de Pago",
-    "DATA_RECEBIMENTO": "Fecha de Pago Recibido",
+    "DATA_RECEBIMENTO": "Fecha de Recepción",
     "CATEGORIA": "Categoría",
     "SUBCATEGORIA": "Subcategoría",
     "STATUS": "Estado",
-    
-    "SELECIONE_SUBCATEGORIA": "Selecciona una Subcategoría",
+
+    "SELECIONE_SUBCATEGORIA": "Seleccione una Subcategoría",
 
     "CADASTRAR": "Registrar",
-    "SALVAR": "Ahorrar",
+    "SALVAR": "Guardar",
     "EDITAR": "Editar",
     "DELETAR": "Eliminar",
     "CANCELAR": "Cancelar",
@@ -29,13 +30,16 @@
     "RECEBER": "Recibir",
     "ESTORNAR": "Reembolsar",
     "OPCOES": "Opciones",
+    "CONSULTAR": "Consultar",
+    "LIMPAR_FILTROS": "Limpiar Filtros",
 
     "Pendente": "Pendiente",
     "Pago": "Pagado",
     "Vencido": "Vencido",
-
+    
     "TEXTOS_MODAL": {
-        "DELETAR_CONFIRMACAO": "¿Realmente desea eliminar el gasto?"
+        "DELETAR_CONFIRMACAO": "¿Realmente desea eliminar el gasto?",
+        "ESTORNAR_CONFIRMACAO": "¿Realmente desea reembolsar el gasto?"
     },
 
     "Moradia": "Vivienda",

@@ -11,6 +11,7 @@
 
     "DESCRICAO": "Descrição",
     "VALOR": "Valor",
+    "VALOR_PAGO": "Valor Pago",
     "DATA_VENCIMENTO": "Data de Vencimento",
     "DATA_PAGAMENTO": "Data de Pagamento",
     "DATA_RECEBIMENTO": "Data de Recebimento",
@@ -29,13 +30,16 @@
     "RECEBER": "Receber",
     "ESTORNAR": "Estornar",
     "OPCOES": "Opções",
+    "CONSULTAR": "Consultar",
+    "LIMPAR_FILTROS": "Limpar Filtros",
 
     "Pendente": "Pendente",
     "Pago": "Pago",
     "Vencido": "Vencido",
 
     "TEXTOS_MODAL": {
-        "DELETAR_CONFIRMACAO": "Deseja realmente deletar a despesa?"
+        "DELETAR_CONFIRMACAO": "Deseja realmente deletar a despesa?",
+        "ESTORNAR_CONFIRMACAO": "Deseja realmente estornar a despesa?"
     },
 
     "Moradia": "Moradia",

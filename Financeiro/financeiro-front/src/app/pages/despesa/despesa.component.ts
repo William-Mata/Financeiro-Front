@@ -1,35 +1,46 @@
 import { Component } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { CommonModule } from '@angular/common';
-import { DespesaMapper } from './../../core/mappers/despesa/despesa.mapper';
-import { Despesa } from '../../core/models/despesa/despesa.model';
-import { DespesaListDTO } from '../../core/dtos/despesa/despesa-list.dto';
+import { ImportacaoPadrao } from "../../shared/imports/importacao.padrao.shared";
+import { CadastrarDespesaComponent } from "./cadastrar-despesa/cadastrar-despesa.component";
+import { ConsultarDespesaComponent } from "./consultar-despesa/consultar-despesa.component";
+import { DeletarDespesaComponent } from "./deletar-despesa/deletar-despesa.component";
+import { EditarDespesaComponent } from './editar-despesa/editar-despesa.component';
+import { PagarDespesaComponent } from "./pagar-despesa/pagar-despesa.component";
+import { EstornarDespesaComponent } from './estornar-despesa/estornar-despesa.component';
 
 @Component({
   selector: 'app-despesa',
-  imports: [FormsModule, CommonModule],
+  imports: [
+    ImportacaoPadrao,
+    ConsultarDespesaComponent,
+    CadastrarDespesaComponent,
+    EditarDespesaComponent,
+    DeletarDespesaComponent,
+    PagarDespesaComponent,
+    EstornarDespesaComponent
+],
   templateUrl: './despesa.component.html',
   styleUrl: './despesa.component.scss'
 })
 
 export class DespesaComponent {
-  despesas: DespesaListDTO[] = [];
-  despesa: Despesa = new Despesa();
-  
-  cadastrarDespesa(){
-    let novaDespesa = new Despesa(
-      this.despesas.length + 1,
-      'Despesa 1',
-      100,
-      new Date(),
-      new Date(),
-      'Alimentação',
-      'Pendente'
-    );
-    
-    this.despesas.push(DespesaMapper.toListDto(novaDespesa));
+  idEditar: number = 0;
+  idDeletar: number = 0;
+  idPagar: number = 0;
+  idEstornar: number = 0;
 
-    console.table(this.despesas);
+  editarDespesa(id: number) {
+    this.idEditar = id;
   }
 
+  pagarDespesa(id: number) {
+    this.idPagar = id;
+  }
+
+  estornarDespesa(id: number) {
+    this.idEstornar = id;
+  }
+
+  deletarDespesa(idDeletar: number) {
+    this.idDeletar = idDeletar;
+  }
 }
