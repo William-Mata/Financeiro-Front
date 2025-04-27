@@ -8,9 +8,11 @@ export class DespesaMapper {
       dto.id,
       dto.descricao,
       dto.valor,
-      dto.dataPagamento,
+      dto.valorPago,
       dto.dataVencimento,
+      dto.dataPagamento,
       dto.categoria,
+      dto.subcategoria,
       dto.status
     );
   }

@@ -1,4 +1,3 @@
-import { ToastrService } from 'ngx-toastr';
 import { FiltroDespesa } from './../../../core/models/filtro/filtro-despesa.model';
 import { Component, EventEmitter, Output } from '@angular/core';
 import { ImportacaoPadrao } from '../../../shared/imports/importacao.padrao.shared';
@@ -6,6 +5,7 @@ import { DespesaListaDTO } from '../../../core/dtos/despesa/despesa-lista.dto';
 import { DespesaService } from '../../../core/services/despesa/despesa.service';
 import { ImportacaoFormulario } from '../../../shared/imports/importacao.formulario.shared';
 import { NgxMaskDirective, provideNgxMask } from 'ngx-mask';
+import { TraducaoNotificacaoService } from '../../../core/services/translate/traducao-notificao.service';
 
 @Component({
   selector: 'app-consultar-despesa',
@@ -28,7 +28,7 @@ export class ConsultarDespesaComponent {
   despesas: DespesaListaDTO[] = [];  
   filtro: FiltroDespesa = new FiltroDespesa();
 
-  constructor(private despesaService: DespesaService, private toastrService: ToastrService) {
+  constructor(private despesaService: DespesaService, private traducaoNotificacaoService: TraducaoNotificacaoService) {
     this.despesas = this.despesaService.listDespesasDTO(this.filtro);
   }
   
@@ -40,7 +40,7 @@ export class ConsultarDespesaComponent {
   
   consultar(){
     this.despesas = this.despesaService.listDespesasDTO(this.filtro);
-    this.toastrService.success('Consulta realizada!', 'Sucesso');
+    this.traducaoNotificacaoService.success('NOTIFICACAO.CONSULTA_REALIZADA', '');
   }
 
   enviarEditar(idEditar: number){

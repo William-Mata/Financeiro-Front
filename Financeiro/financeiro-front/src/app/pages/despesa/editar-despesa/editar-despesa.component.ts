@@ -3,9 +3,9 @@ import { ImportacaoPadrao } from '../../../shared/imports/importacao.padrao.shar
 import { ImportacaoFormulario } from '../../../shared/imports/importacao.formulario.shared';
 import { CategoriaService } from '../../../core/services/categoria/categoria.service';
 import { DespesaService } from '../../../core/services/despesa/despesa.service';
-import { ToastrService } from 'ngx-toastr';
 import { DespesaEdicaoDTO } from '../../../core/dtos/despesa/despesa-edicao.dto';
 import { NgxMaskDirective, provideNgxMask } from 'ngx-mask';
+import { TraducaoNotificacaoService } from '../../../core/services/translate/traducao-notificao.service';
 
 @Component({
   selector: 'app-editar-despesa',
@@ -24,7 +24,7 @@ export class EditarDespesaComponent {
   despesa: DespesaEdicaoDTO = new DespesaEdicaoDTO();
   categorias: any[] = [];
   
-  constructor (private categoriaService: CategoriaService, private despesaService: DespesaService, private toastrService: ToastrService) 
+  constructor (private categoriaService: CategoriaService, private despesaService: DespesaService, private traducaoNotificacaoService: TraducaoNotificacaoService) 
   {
     this.categorias = this.categoriaService.listarCategoriasDespesas();
   }
@@ -35,13 +35,11 @@ export class EditarDespesaComponent {
     if (changes['idEditar'] && changes['idEditar'].currentValue > 0) {
       this.despesa = this.despesaService.buscarDespesaEdicaoPorId(this.idEditar);
     }
-
   }
  
   editar() {
     this.despesaService.editar(this.despesa);
-    this.toastrService.success('Despesa editada!', 'Sucesso!');
-    
+    this.traducaoNotificacaoService.success('NOTIFICACAO.DESPESA_EDITADA', '');
   }
 
 }

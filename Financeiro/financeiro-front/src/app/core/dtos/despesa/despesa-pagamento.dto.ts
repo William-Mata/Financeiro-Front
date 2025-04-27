@@ -1,4 +1,4 @@
-export class DespesaPagamentoDto {
+export class DespesaPagamentoDTO {
     id?: number;
     valorPago?: number;
     dataPagamento?: Date;

@@ -5,7 +5,7 @@ import { CategoriaService } from '../../../core/services/categoria/categoria.ser
 import { ImportacaoPadrao } from '../../../shared/imports/importacao.padrao.shared';
 import { ImportacaoFormulario } from '../../../shared/imports/importacao.formulario.shared';
 import { NgxMaskDirective, provideNgxMask } from 'ngx-mask';
-import { ToastrService } from 'ngx-toastr';
+import { TraducaoNotificacaoService } from '../../../core/services/translate/traducao-notificao.service';
 
 @Component({
   selector: 'app-cadastrar-despesa',
@@ -24,7 +24,7 @@ export class CadastrarDespesaComponent {
   categorias: any[] = [];
   
   constructor(private categoriaService: CategoriaService, private despesaService: DespesaService,
-              private toastrService: ToastrService) {}
+              private traducaoNotificacaoService: TraducaoNotificacaoService) {}
 
   ngOnInit(): void {
     this.categorias = this.categoriaService.listarCategoriasDespesas();
@@ -33,6 +33,6 @@ export class CadastrarDespesaComponent {
   salvar(){
     this.despesaService.salvar(this.despesa);
     this.despesa = new Despesa();
-    this.toastrService.success('Despesa cadastrada!', "Sucesso!");
+    this.traducaoNotificacaoService.success('NOTIFICACAO.DESPESA_CADASTRADA', ' ');
   }
 }

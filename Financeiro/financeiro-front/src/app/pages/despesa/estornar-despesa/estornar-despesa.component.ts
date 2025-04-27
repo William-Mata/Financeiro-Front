@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { ImportacaoFormulario } from '../../../shared/imports/importacao.formulario.shared';
 import { ImportacaoPadrao } from '../../../shared/imports/importacao.padrao.shared';
 import { DespesaService } from '../../../core/services/despesa/despesa.service';
-import { ToastrService } from 'ngx-toastr';
+import { TraducaoNotificacaoService } from '../../../core/services/translate/traducao-notificao.service';
 
 @Component({
   selector: 'app-estornar-despesa',
@@ -17,12 +17,12 @@ import { ToastrService } from 'ngx-toastr';
 export class EstornarDespesaComponent {
   @Input() idEstornar: number | undefined;
 
-  constructor(private despesaService: DespesaService, private toastr: ToastrService) {}
+  constructor(private despesaService: DespesaService, private traducaoNotificacaoService: TraducaoNotificacaoService) {}
 
   estornar(){
     if(this.idEstornar && this.idEstornar > 0) {
       this.despesaService.estornar(this.idEstornar!);
-      this.toastr.success('Despesa Estornada.', 'Sucesso!');
+      this.traducaoNotificacaoService.success('NOTIFICACAO.DESPESA_ESTORNADA', '');
     }
   }
 }

@@ -5,7 +5,7 @@ import { BehaviorSubject } from 'rxjs';
 import { Despesa } from '../../models/despesa/despesa.model';
 import { DespesaListaDTO } from '../../dtos/despesa/despesa-lista.dto';
 import { DespesaEdicaoDTO } from '../../dtos/despesa/despesa-edicao.dto';
-import { DespesaPagamentoDto } from './../../dtos/despesa/despesa-pagamento.dto';
+import { DespesaPagamentoDTO } from './../../dtos/despesa/despesa-pagamento.dto';
 import { FiltroDespesa } from './../../models/filtro/filtro-despesa.model';
 import { TransacaoStatus } from '../../enums/transacao-status.enum';
 import { DespesaMapper } from '../../mappers/despesa/despesa.mapper';
@@ -39,15 +39,15 @@ export class DespesaService {
     this.despesasSubject.next(this.despesas);
   }
 
-  editar(desepsaEdicao: DespesaEdicaoDTO) {
-    const index = this.despesas.findIndex(d => d.id === desepsaEdicao.id);
+  editar(despesaEdicao: DespesaEdicaoDTO) {
+    const index = this.despesas.findIndex(d => d.id === despesaEdicao.id);
 
     if (index >= 0) {
-      this.despesas[index].categoria = this.categoriaService.buscarCategoriaPorSubCategoriaDespesa(desepsaEdicao.subcategoria);
-      this.despesas[index].descricao = desepsaEdicao.descricao;
-      this.despesas[index].valor = desepsaEdicao.valor;
-      this.despesas[index].dataVencimento = desepsaEdicao.dataVencimento;
-      this.despesas[index].subcategoria = desepsaEdicao.subcategoria;
+      this.despesas[index].categoria = this.categoriaService.buscarCategoriaPorSubCategoriaDespesa(despesaEdicao.subcategoria);
+      this.despesas[index].descricao = despesaEdicao.descricao;
+      this.despesas[index].valor = despesaEdicao.valor;
+      this.despesas[index].dataVencimento = despesaEdicao.dataVencimento;
+      this.despesas[index].subcategoria = despesaEdicao.subcategoria;
     }
 
     this.despesasSubject.next(this.despesas);
@@ -58,7 +58,7 @@ export class DespesaService {
     this.despesasSubject.next(this.despesas);
   }
 
-  pagar(despesaPagamento : DespesaPagamentoDto) {
+  pagar(despesaPagamento : DespesaPagamentoDTO) {
     if(despesaPagamento.id) {
       const despesa = this.despesas.find(d => d.id === despesaPagamento.id);
       
