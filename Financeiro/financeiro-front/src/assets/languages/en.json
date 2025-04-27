@@ -12,6 +12,7 @@
     "DESCRICAO": "Description",
     "VALOR": "Amount",
     "VALOR_PAGO": "Amount Paid",
+    "VALOR_RECEBIDO": "Amount Received",
     "DATA_VENCIMENTO": "Due Date",
     "DATA_PAGAMENTO": "Payment Date",
     "DATA_RECEBIMENTO": "Receipt Date",
@@ -38,8 +39,26 @@
     "Vencido": "Overdue",
 
     "TEXTOS_MODAL": {
-        "DELETAR_CONFIRMACAO": "Do you really want to delete the expense?",
-        "ESTORNAR_CONFIRMACAO": "Do you really want to refund the expense?"
+        "DELETAR_CONFIRMACAO_DESPESA": "Do you really want to delete the expense?",
+        "ESTORNAR_CONFIRMACAO_DESPESA": "Do you really want to reverse the expense?",
+        "DELETAR_CONFIRMACAO_RECEITA": "Do you really want to delete the income?",
+        "ESTORNAR_CONFIRMACAO_RECEITA": "Do you really want to reverse the income?"
+    },
+
+    "NOTIFICACAO": {
+        "CONSULTA_REALIZADA": "Query completed",
+        
+        "RECEITA_CADASTRADA": "Income Created",
+        "RECEITA_EDITADA": "Income Edited",
+        "RECEITA_DELETADA": "Income Deleted",
+        "RECEITA_RECEBIDA": "Income Received",
+        "RECEITA_ESTORNADA": "Income Reversed",
+
+        "DESPESA_CADASTRADA": "Expense Created",
+        "DESPESA_EDITADA": "Expense Edited",
+        "DESPESA_DELETADA": "Expense Deleted",
+        "DESPESA_ESTORNADA": "Expense Reversed",
+        "DESPESA_PAGA": "Expense Paid"
     },
 
     "Moradia": "Housing",

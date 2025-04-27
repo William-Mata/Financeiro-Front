@@ -1,0 +1,39 @@
+<div class="modal fade modal-lg" id="modalReceber" aria-hidden="true" aria-labelledby="modalReceber" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="receberReceitaLabel">
+                    {{ 'RECEBER' | translate}} {{ 'RECEITA' | translate}}
+                </h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form class="row g-3" (ngSubmit)="receber();" #formReceberReceita="ngForm">
+                    <mat-form-field class="col-6">
+                        <mat-label>{{ 'VALOR' | translate}}</mat-label>
+                        <input matInput type="text" mask="separator.2" decimalMarker="," thousandSeparator="." placeholder="100,00" [(ngModel)]="receita.valorRecebido" name="receberValorRecebido" required>
+                    </mat-form-field>
+
+                    <mat-form-field class="col-6" appearance="fill">
+                        <mat-label>{{ 'DATA_RECEBIMENTO' | translate }}</mat-label>
+                        <input matInput [matDatepicker]="picker" [(ngModel)]="receita.dataRecebimento" name="receberDataRecebimento" required readonly>
+                        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                        <mat-datepicker #picker disabled="false"></mat-datepicker>
+                    </mat-form-field>
+
+                    <hr/>
+                    <div class="col-12">
+                        <button class="btn btn-success p-2 mx-1 rounded-pill" type="submit" [disabled]="formReceberReceita.invalid" data-bs-toggle="modal" data-bs-dismiss="#modalReceber">
+                            <i class="fa-solid fa-money-bill-wave"></i>
+                            {{ 'RECEBER' | translate}}
+                        </button>
+                        <button class="btn btn-secondary p-2 mx-1 rounded-pill" type="button" data-bs-toggle="modal" data-bs-dismiss="#modalReceber">
+                            <i class="fa-solid fa-xmark ms-1"></i>
+                            {{ 'CANCELAR' | translate}}
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

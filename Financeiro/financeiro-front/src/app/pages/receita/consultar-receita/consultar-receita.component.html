@@ -1,0 +1,93 @@
+<div class="col-12 p-3 bg-opacity-25 bg-degrade border border-secondary rounded shadown my-3">
+    <h2>{{'RECEITA' | translate}}</h2>
+    <hr>
+    
+    <form class="row g-3" (ngSubmit)="consultar();" #formConsultarReceita="ngForm">
+        <mat-form-field class="col-4">
+            <mat-label>{{ 'Id' | translate}}</mat-label>
+            <input matInput type="number" placeholder="1" [(ngModel)]="filtro.id" name="consultarDescricao">
+        </mat-form-field>
+
+        <mat-form-field class="col-4">
+            <mat-label>{{ 'DESCRICAO' | translate}}</mat-label>
+            <input matInput type="text" placeholder="Internet" [(ngModel)]="filtro.descricao" name="consultarDescricao">
+        </mat-form-field>
+
+        <mat-form-field class="col-4">
+            <mat-label>{{ 'VALOR' | translate}}</mat-label>
+            <input matInput type="text" mask="separator.2" decimalMarker="," thousandSeparator="." placeholder="100,00" [(ngModel)]="filtro.valor" name="consultarValor">
+        </mat-form-field>
+
+        <hr/>
+        <div class="col-12 d-flex">
+            <button type="button" class="btn btn-primary rounded-pill mx-1" data-bs-toggle="modal" data-bs-target="#modalCadastrar">
+                <i class="fa fa-plus me-1"></i> {{'CADASTRAR' | translate}}
+            </button>
+            <button type="submit"  class="btn btn-info rounded-pill mx-1">
+                <i class="fa-solid fa-magnifying-glass-dollar me-1"></i> {{'CONSULTAR' | translate}}
+            </button>
+            <button type="reset" class="btn btn-danger rounded-pill mx-1">
+                <i class="fa-solid fa-eraser me-1"></i> {{'LIMPAR_FILTROS' | translate}}
+            </button>
+        </div>
+    </form>
+</div>
+
+
+<div class="col-12 table-responsive p-3 bg-opacity-25 border border-secondary rounded shadown m-0" *ngIf="receitas.length > 0">
+    <table class="table table-dark table-striped table-hover table-bordered align-middle">
+        <thead >
+            <tr>
+                <th>{{'OPCOES' | translate}}</th>
+                <th>Id</th>
+                <th>{{ 'DESCRICAO' | translate }}</th>
+                <th>{{ 'STATUS' | translate }}</th>
+                <th>{{ 'CATEGORIA' | translate }}</th>
+                <th>{{ 'SUBCATEGORIA' | translate }}</th>
+                <th>{{ 'VALOR' | translate }}</th>
+                <th>{{ 'VALOR_RECEBIDO' | translate }}</th>
+                <th>{{ 'DATA_VENCIMENTO' | translate }}</th>
+                <th>{{ 'DATA_RECEBIMENTO' | translate }}</th>
+            </tr>
+        </thead>
+        <tbody class="table-group-divider">
+            <tr *ngFor="let item of receitas">
+                <td>
+                    <button mat-mini-fab [matMenuTriggerFor]="menu">
+                        <mat-icon>menu</mat-icon>
+                    </button>
+                    <mat-menu #menu="matMenu">
+                        <button mat-menu-item (click)="enviarEditar(item.id ?? 0)" data-bs-toggle="modal" data-bs-target="#modalEditar">
+                            <i class="fa-solid fa-pen-to-square me-1"></i>
+                            {{'EDITAR' | translate}}
+                        </button>
+                        <button mat-menu-item (click)="enviarPagar(item.id ?? 0)" *ngIf="item.status != 'Pago'" data-bs-toggle="modal" data-bs-target="#modalPagar" >
+                            <i class="fa-solid fa-money-bill-1-wave me-1"></i>
+                            {{'RECEBER' | translate}}
+                        </button>
+                        <button mat-menu-item (click)="enviarEstornar(item.id ?? 0)" *ngIf="item.status == 'Pago'"data-bs-toggle="modal" data-bs-target="#modalEstornar" >
+                            <i class="fa-solid fa-arrow-rotate-left me-1"></i>
+                            {{'ESTORNAR' | translate}}
+                        </button>
+                        <button mat-menu-item (click)="enviarDeletar(item.id ?? 0)" data-bs-toggle="modal" data-bs-target="#modalDeletar" >
+                            <i class="fa-solid fa-trash me-1"></i>
+                            {{'DELETAR' | translate}}
+                        </button>
+                    </mat-menu>
+                </td>
+                <td>{{item.id}}</td>
+                <td>{{item.descricao}}</td>
+                <td>{{item.status  ?? '' | translate}}</td>
+                <td>{{item.categoria ?? '' | translate}}</td>
+                <td>{{item.subcategoria ?? '' | translate}}</td>
+                <td>{{item.valor}}</td>
+                <td>{{item.valorRecebido}}</td>
+                <td>{{item.dataVencimento}}</td>
+                <td>{{item.dataRecebimento}}</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            
+        </tfoot>
+    </table>
+</div>

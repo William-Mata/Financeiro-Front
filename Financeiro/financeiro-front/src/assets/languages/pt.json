@@ -12,6 +12,7 @@
     "DESCRICAO": "Descrição",
     "VALOR": "Valor",
     "VALOR_PAGO": "Valor Pago",
+    "VALOR_RECEBIDO": "Valor Recebido",
     "DATA_VENCIMENTO": "Data de Vencimento",
     "DATA_PAGAMENTO": "Data de Pagamento",
     "DATA_RECEBIMENTO": "Data de Recebimento",
@@ -38,8 +39,26 @@
     "Vencido": "Vencido",
 
     "TEXTOS_MODAL": {
-        "DELETAR_CONFIRMACAO": "Deseja realmente deletar a despesa?",
-        "ESTORNAR_CONFIRMACAO": "Deseja realmente estornar a despesa?"
+        "DELETAR_CONFIRMACAO_DESPESA": "Deseja realmente deletar a despesa?",
+        "ESTORNAR_CONFIRMACAO_DESPESA": "Deseja realmente estornar a despesa?",
+        "DELETAR_CONFIRMACAO_RECEITA": "Deseja realmente deletar a receita?",
+        "ESTORNAR_CONFIRMACAO_RECEITA": "Deseja realmente estornar a receita?"
+    },
+
+    "NOTIFICACAO": {
+        "CONSULTA_REALIZADA": "Consulta realizada",
+
+        "RECEITA_CADASTRADA": "Receita Cadastrada",
+        "RECEITA_EDITADA": "Receita Editada",
+        "RECEITA_DELETADA": "Receita Deletada",
+        "RECEITA_RECEBIDA": "Receita Recebida",
+        "RECEITA_ESTORNADA": "Receita Estornada",
+
+        "DESPESA_CADASTRADA": "Despesa Cadastrada",
+        "DESPESA_EDITADA": "Despesa Editada",
+        "DESPESA_DELETADA": "Despesa Deletada",
+        "DESPESA_ESTORNADA": "Despesa Estornada",
+        "DESPESA_PAGA": "Despesa Paga"
     },
 
     "Moradia": "Moradia",

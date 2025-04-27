@@ -12,6 +12,7 @@
     "DESCRICAO": "Descripción",
     "VALOR": "Valor",
     "VALOR_PAGO": "Valor Pagado",
+    "VALOR_RECEBIDO": "Valor Recibido",
     "DATA_VENCIMENTO": "Fecha de Vencimiento",
     "DATA_PAGAMENTO": "Fecha de Pago",
     "DATA_RECEBIMENTO": "Fecha de Recepción",
@@ -38,8 +39,26 @@
     "Vencido": "Vencido",
     
     "TEXTOS_MODAL": {
-        "DELETAR_CONFIRMACAO": "¿Realmente desea eliminar el gasto?",
-        "ESTORNAR_CONFIRMACAO": "¿Realmente desea reembolsar el gasto?"
+        "DELETAR_CONFIRMACAO_DESPESA": "¿Realmente desea eliminar el gasto?",
+        "ESTORNAR_CONFIRMACAO_DESPESA": "¿Realmente desea revertir el gasto?",
+        "DELETAR_CONFIRMACAO_RECEITA": "¿Realmente desea eliminar el ingreso?",
+        "ESTORNAR_CONFIRMACAO_RECEITA": "¿Realmente desea revertir el ingreso?"
+    },
+
+    "NOTIFICACAO": {
+        "CONSULTA_REALIZADA": "Consulta realizada",
+        
+        "RECEITA_CADASTRADA": "Ingreso Registrado",
+        "RECEITA_EDITADA": "Ingreso Editado",
+        "RECEITA_DELETADA": "Ingreso Eliminado",
+        "RECEITA_RECEBIDA": "Ingreso Recibido",
+        "RECEITA_ESTORNADA": "Ingreso Revertido",
+
+        "DESPESA_CADASTRADA": "Gasto Registrado",
+        "DESPESA_EDITADA": "Gasto Editado",
+        "DESPESA_DELETADA": "Gasto Eliminado",
+        "DESPESA_ESTORNADA": "Gasto Revertido",
+        "DESPESA_PAGA": "Gasto Pagado"
     },
 
     "Moradia": "Vivienda",
