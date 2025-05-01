@@ -117,3 +117,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .toast-top-center {
     top: 10px !important; /* Altere o valor conforme quiser */
 }
+
+td, th, tr {
+    text-align: center;
+}

@@ -19,6 +19,10 @@
     "CATEGORIA": "Categoría",
     "SUBCATEGORIA": "Subcategoría",
     "STATUS": "Estado",
+    "SALDO_INICIAL": "Saldo Inicial",
+    "SALDO_ATUAL": "Saldo Actual",
+    "TIPO": "Tipo",
+    "BANCO": "Banco",
 
     "SELECIONE_SUBCATEGORIA": "Seleccione una Subcategoría",
 
@@ -26,6 +30,8 @@
     "SALVAR": "Guardar",
     "EDITAR": "Editar",
     "DELETAR": "Eliminar",
+    "INATIVAR": "Desactivar",
+     "ATIVAR": "Activar",
     "CANCELAR": "Cancelar",
     "PAGAR": "Pagar",
     "RECEBER": "Recibir",
@@ -37,12 +43,19 @@
     "Pendente": "Pendiente",
     "Pago": "Pagado",
     "Vencido": "Vencido",
+
+    "TEXTOS_COMBO": {
+        "SELECIONE_TIPO_CONTA": "Seleccione el Tipo de Cuenta",
+        "SELECIONE_BANCO": "Seleccione el Banco"
+    },
     
     "TEXTOS_MODAL": {
         "DELETAR_CONFIRMACAO_DESPESA": "¿Realmente desea eliminar el gasto?",
         "ESTORNAR_CONFIRMACAO_DESPESA": "¿Realmente desea revertir el gasto?",
         "DELETAR_CONFIRMACAO_RECEITA": "¿Realmente desea eliminar el ingreso?",
-        "ESTORNAR_CONFIRMACAO_RECEITA": "¿Realmente desea revertir el ingreso?"
+        "ESTORNAR_CONFIRMACAO_RECEITA": "¿Realmente desea revertir el ingreso?",
+        "INATIVAR_CONFIRMACAO_CONTA_BANCARIA": "¿Realmente desea desactivar la cuenta bancaria?",
+        "ATIVAR_CONFIRMACAO_CONTA_BANCARIA": "¿Realmente desea activar la cuenta bancaria?"
     },
 
     "NOTIFICACAO": {
@@ -58,7 +71,12 @@
         "DESPESA_EDITADA": "Gasto Editado",
         "DESPESA_DELETADA": "Gasto Eliminado",
         "DESPESA_ESTORNADA": "Gasto Revertido",
-        "DESPESA_PAGA": "Gasto Pagado"
+        "DESPESA_PAGA": "Gasto Pagado",
+
+        "CONTA_BANCARIA_CADASTRADA": "Cuenta Bancaria Registrada",
+        "CONTA_BANCARIA_EDITADA": "Cuenta Bancaria Editada",
+        "CONTA_BANCARIA_INATIVAR": "Cuenta Bancaria Desactivada",
+        "CONTA_BANCARIA_ATIVAR": "Cuenta Bancaria Activada"
     },
 
     "Moradia": "Vivienda",

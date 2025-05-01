@@ -19,6 +19,10 @@
     "CATEGORIA": "Categoria",
     "SUBCATEGORIA": "Subcategoria",
     "STATUS": "Status",
+    "SALDO_INICIAL": "Saldo Incial",
+    "SALDO_ATUAL": "Saldo Atual",
+    "TIPO": "Tipo",
+    "BANCO": "Banco",
     
     "SELECIONE_SUBCATEGORIA": "Selecione uma Subcategoria",
 
@@ -26,6 +30,8 @@
     "SALVAR": "Salvar",
     "EDITAR": "Editar",
     "DELETAR": "Deletar",
+    "INATIVAR": "Inativar",
+    "ATIVAR": "Ativar",
     "CANCELAR": "Cancelar",
     "PAGAR": "Pagar",
     "RECEBER": "Receber",
@@ -38,11 +44,18 @@
     "Pago": "Pago",
     "Vencido": "Vencido",
 
+    "TEXTOS_COMBO": {
+        "SELECIONE_TIPO_CONTA": "Selecione o Tipo da Conta",
+        "SELECIONE_BANCO": "Selecione o Banco"
+    },
+
     "TEXTOS_MODAL": {
         "DELETAR_CONFIRMACAO_DESPESA": "Deseja realmente deletar a despesa?",
         "ESTORNAR_CONFIRMACAO_DESPESA": "Deseja realmente estornar a despesa?",
         "DELETAR_CONFIRMACAO_RECEITA": "Deseja realmente deletar a receita?",
-        "ESTORNAR_CONFIRMACAO_RECEITA": "Deseja realmente estornar a receita?"
+        "ESTORNAR_CONFIRMACAO_RECEITA": "Deseja realmente estornar a receita?",
+        "INATIVAR_CONFIRMACAO_CONTA_BANCARIA": "Deseja realmente inativar a conta bancária?",
+        "ATIVAR_CONFIRMACAO_CONTA_BANCARIA": "Deseja realmente ativar a conta bancária?"
     },
 
     "NOTIFICACAO": {
@@ -58,7 +71,12 @@
         "DESPESA_EDITADA": "Despesa Editada",
         "DESPESA_DELETADA": "Despesa Deletada",
         "DESPESA_ESTORNADA": "Despesa Estornada",
-        "DESPESA_PAGA": "Despesa Paga"
+        "DESPESA_PAGA": "Despesa Paga",
+
+        "CONTA_BANCARIA_CADASTRADA": "Conta Bancária Cadastrada",
+        "CONTA_BANCARIA_EDITADA": "Conta Bancária Editada",
+        "CONTA_BANCARIA_INATIVAR": "Conta Bancária Inativada",
+        "CONTA_BANCARIA_ATIVAR": "Conta Bancária Ativada"
     },
 
     "Moradia": "Moradia",

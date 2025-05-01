@@ -19,6 +19,10 @@
     "CATEGORIA": "Category",
     "SUBCATEGORIA": "Subcategory",
     "STATUS": "Status",
+    "SALDO_INICIAL": "Initial Balance",
+    "SALDO_ATUAL": "Current Balance",
+    "TIPO": "Type",
+    "BANCO": "Bank",
 
     "SELECIONE_SUBCATEGORIA": "Select a Subcategory",
 
@@ -26,6 +30,8 @@
     "SALVAR": "Save",
     "EDITAR": "Edit",
     "DELETAR": "Delete",
+    "INATIVAR": "Deactivate",
+    "ATIVAR": "Activate",
     "CANCELAR": "Cancel",
     "PAGAR": "Pay",
     "RECEBER": "Receive",
@@ -38,11 +44,18 @@
     "Pago": "Paid",
     "Vencido": "Overdue",
 
+    "TEXTOS_COMBO": {
+        "SELECIONE_TIPO_CONTA": "Select Account Type",
+        "SELECIONE_BANCO": "Select Bank"
+    },
+
     "TEXTOS_MODAL": {
         "DELETAR_CONFIRMACAO_DESPESA": "Do you really want to delete the expense?",
         "ESTORNAR_CONFIRMACAO_DESPESA": "Do you really want to reverse the expense?",
         "DELETAR_CONFIRMACAO_RECEITA": "Do you really want to delete the income?",
-        "ESTORNAR_CONFIRMACAO_RECEITA": "Do you really want to reverse the income?"
+        "ESTORNAR_CONFIRMACAO_RECEITA": "Do you really want to reverse the income?",
+        "INATIVAR_CONFIRMACAO_CONTA_BANCARIA": "Do you really want to deactivate the bank account?",
+        "ATIVAR_CONFIRMACAO_CONTA_BANCARIA": "Do you really want to activate the bank account?"
     },
 
     "NOTIFICACAO": {
@@ -58,7 +71,12 @@
         "DESPESA_EDITADA": "Expense Edited",
         "DESPESA_DELETADA": "Expense Deleted",
         "DESPESA_ESTORNADA": "Expense Reversed",
-        "DESPESA_PAGA": "Expense Paid"
+        "DESPESA_PAGA": "Expense Paid",
+
+        "CONTA_BANCARIA_CADASTRADA": "Registered Bank Account",
+        "CONTA_BANCARIA_EDITADA": "Edited Bank Account",
+        "CONTA_BANCARIA_INATIVAR": "Bank Account Deactivated",
+        "CONTA_BANCARIA_ATIVAR": "Bank Account Activated"
     },
 
     "Moradia": "Housing",

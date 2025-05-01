@@ -1,4 +1,3 @@
-import { ToastrService } from 'ngx-toastr';
 import { Component, Input, SimpleChanges } from '@angular/core';
 import { ImportacaoPadrao } from '../../../shared/imports/importacao.padrao.shared';
 import { ImportacaoFormulario } from '../../../shared/imports/importacao.formulario.shared';

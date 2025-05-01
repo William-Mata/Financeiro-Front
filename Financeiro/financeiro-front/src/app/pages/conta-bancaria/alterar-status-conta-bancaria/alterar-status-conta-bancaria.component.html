@@ -1,0 +1,37 @@
+<div class="modal fade modal-lg" id="modalAlterarStatus" aria-hidden="true" aria-labelledby="modalAlterarStatus" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="alterarStatusContaBancariaLabel">
+                    <span *ngIf="this.contaBancaria.status === 'Ativa'">{{ 'INATIVAR' | translate}}</span> 
+                    <span *ngIf="this.contaBancaria.status === 'Inativa'">{{ 'ATIVAR' | translate}}</span> 
+                    {{ 'CONTA_BANCARIA' | translate}}
+                </h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form class="row g-3" (ngSubmit)="alterarStatus();" #formAlterarStatusContaBancaria="ngForm">
+                    <div class="col-12">
+                        <h5 *ngIf="this.contaBancaria.status === 'Ativa'">{{'TEXTOS_MODAL.INATIVAR_CONFIRMACAO_CONTA_BANCARIA' | translate}}</h5>
+                        <h5 *ngIf="this.contaBancaria.status === 'Inativa'">{{'TEXTOS_MODAL.ATIVAR_CONFIRMACAO_CONTA_BANCARIA' | translate}}</h5>
+                    </div>
+                    <hr/>
+                    <div class="col-12">
+                        <button *ngIf="this.contaBancaria.status === 'Ativa'" class="btn btn-danger p-2 mx-1 rounded-pill" type="submit" data-bs-toggle="modal" data-bs-dismiss="#modalAlterarStatus">
+                            <i class="fa fa-ban"></i>
+                            {{ 'INATIVAR' | translate}}
+                        </button>
+                        <button *ngIf="this.contaBancaria.status === 'Inativa'" class="btn btn-success p-2 mx-1 rounded-pill" type="submit" data-bs-toggle="modal" data-bs-dismiss="#modalAlterarStatus">
+                            <i class="fa fa-check-circle"></i> 
+                            {{ 'ATIVAR' | translate}}
+                        </button>
+                        <button class="btn btn-secondary p-2 mx-1 rounded-pill" type="button" data-bs-toggle="modal" data-bs-dismiss="#modalAlterarStatus">
+                            <i class="fa-solid fa-xmark ms-1"></i>
+                            {{ 'CANCELAR' | translate}}
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

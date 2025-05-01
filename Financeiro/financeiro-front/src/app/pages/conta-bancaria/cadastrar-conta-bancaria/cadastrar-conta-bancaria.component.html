@@ -1,0 +1,53 @@
+<div class="modal fade modal-lg" id="modalCadastrar" aria-hidden="true" aria-labelledby="modalCadastrar" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="cadastrarContaBancariaLabel">
+                    {{ 'CADASTRAR' | translate}} {{ 'CONTA_BANCARIA' | translate}}
+                </h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form class="row g-3" (ngSubmit)="salvar();" #formCadastrarContaBancaria="ngForm">
+
+                    <mat-form-field class="col-12">
+                        <mat-label>{{ 'DESCRICAO' | translate}}</mat-label>
+                        <input matInput type="text" placeholder="Internet" [(ngModel)]="contaBancaria.descricao" name="cadastrarDescricao" required>
+                    </mat-form-field>
+
+                    <mat-form-field class="col-6">
+                        <mat-label>{{ 'SALDO_INICIAL' | translate}}</mat-label>
+                        <input matInput type="text" mask="separator.2" decimalMarker="," thousandSeparator="." placeholder="100,00" [(ngModel)]="contaBancaria.saldoInicial" name="cadastrarSaldoIncial" required>
+                    </mat-form-field>
+
+                    <mat-form-field appearance="fill" class="col-6">
+                        <mat-label>{{'TEXTOS_COMBO.SELECIONE_TIPO_CONTA' | translate}}</mat-label>
+                        <mat-select [(value)]="contaBancaria.tipo">
+                            <mat-option *ngFor="let tipo of tipos" [value]="tipo.descricao">
+                                {{ tipo.descricao }}
+                            </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                    
+                    <mat-form-field appearance="fill" class="col-12">
+                        <mat-label>{{'TEXTOS_COMBO.SELECIONE_BANCO' | translate}}</mat-label>
+                        <mat-select [(value)]="contaBancaria.banco">
+                            <mat-option *ngFor="let banco of bancos" [value]="banco.label">
+                                <img [src]="banco.iconPath" width="20" height="20" alt="{{ banco.label }}" style="margin-right: 8px;">
+                                {{ banco.label }}
+                            </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+
+                    <hr/>
+                    <div class="col-12">
+                        <button mat-flat-button type="submit" [disabled]="formCadastrarContaBancaria.invalid" data-bs-toggle="modal" data-bs-dismiss="#modalCadastrar">
+                            <mat-icon fontIcon="save"></mat-icon> {{'SALVAR' | translate}}
+                        </button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
