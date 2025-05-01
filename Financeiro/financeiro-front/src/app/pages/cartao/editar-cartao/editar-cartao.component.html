@@ -1,0 +1,58 @@
+<div class="modal fade modal-lg" id="modalEditar" aria-hidden="true" aria-labelledby="modalEditar" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="editarcartaoLabel">
+                    {{ 'EDITAR' | translate}} {{ 'CARTAO' | translate}}
+                </h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form class="row g-3" (ngSubmit)="editar();" #formEditarCartao="ngForm">
+
+                    <mat-form-field class="col-12">
+                        <mat-label>{{ 'DESCRICAO' | translate}}</mat-label>
+                        <input matInput type="text" placeholder="Internet" [(ngModel)]="cartao.descricao" name="cadastrarDescricao" required>
+                    </mat-form-field>
+                    
+                    <mat-form-field appearance="fill" class="col-6">
+                        <mat-label>{{'TEXTOS_COMBO.SELECIONE_BANDEIRA_CARTAO' | translate}}</mat-label>
+                        <mat-select [(value)]="cartao.bandeira">
+                            <mat-option *ngFor="let bandeira of bandeiras" [value]="bandeira.label">
+                                <img [src]="bandeira.iconPath" width="20" height="20" alt="{{ bandeira.label }}" style="margin-right: 8px;">
+                                {{ bandeira.label }}
+                            </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+
+                    <mat-form-field appearance="fill" class="col-6">
+                        <mat-label>{{'TEXTOS_COMBO.SELECIONE_TIPO_CARTAO' | translate}}</mat-label>
+                        <mat-select [(value)]="cartao.tipo">
+                            <mat-option *ngFor="let tipo of tipos" [value]="tipo.descricao">
+                                {{ tipo.descricao }}
+                            </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+
+                    <mat-form-field class="col-6" *ngIf="cartao.tipo == 'Crédito'">
+                        <mat-label>{{ 'DIA_FECHAMENTO_FATURA' | translate}}</mat-label>
+                        <input matInput type="number" min="1" max="31" placeholder="1" [(ngModel)]="cartao.diaFechamentoFatura" name="cadastrarDiaFechamentoFatura" required>
+                    </mat-form-field>
+
+                    <mat-form-field class="col-6" *ngIf="cartao.tipo == 'Crédito'">
+                        <mat-label>{{ 'LIMITE_TOTAL_ATUAL' | translate}}</mat-label>
+                        <input matInput type="text" mask="separator.2" decimalMarker="," thousandSeparator="." placeholder="100,00" [(ngModel)]="cartao.limiteTotalAtual" name="cadastrarLimiteTotalAtual" required>
+                    </mat-form-field>
+                    
+                    <hr/>
+                    <div class="col-12">
+                        <button mat-flat-button type="submit" [disabled]="formEditarCartao.invalid" data-bs-toggle="modal" data-bs-dismiss="#modalEditar">
+                            <mat-icon fontIcon="save"></mat-icon> {{'SALVAR' | translate}}
+                        </button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

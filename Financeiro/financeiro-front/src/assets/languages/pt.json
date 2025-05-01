@@ -5,6 +5,7 @@
     "DESPESA": "Despesa",
     "RECEITA": "Receita",
     "CONTA_BANCARIA": "Conta Bancária",
+    "CARTAO": "Cartão",
     "PERFIL": "Perfil",
     "MUDAR_TEMA": "Mudar Tema",
     "SAIR": "Sair",
@@ -23,8 +24,11 @@
     "SALDO_ATUAL": "Saldo Atual",
     "TIPO": "Tipo",
     "BANCO": "Banco",
-    
-    "SELECIONE_SUBCATEGORIA": "Selecione uma Subcategoria",
+    "DIA_FECHAMENTO_FATURA": "Dia de Fechamento da Fatura",
+    "LIMITE_TOTAL_INICIAL": "Limite Total Inicial",
+    "LIMITE_TOTAL_ATUAL": "Limite Total Atual",
+    "LIMITE_DISPONIVEL": "Limite Disponível",
+    "BANDEIRA": "Bandeira",
 
     "CADASTRAR": "Cadastrar",
     "SALVAR": "Salvar",
@@ -32,6 +36,8 @@
     "DELETAR": "Deletar",
     "INATIVAR": "Inativar",
     "ATIVAR": "Ativar",
+    "BLOQUEAR": "Bloquear",
+    "DESBLOQUEAR": "Desbloquear",
     "CANCELAR": "Cancelar",
     "PAGAR": "Pagar",
     "RECEBER": "Receber",
@@ -46,7 +52,10 @@
 
     "TEXTOS_COMBO": {
         "SELECIONE_TIPO_CONTA": "Selecione o Tipo da Conta",
-        "SELECIONE_BANCO": "Selecione o Banco"
+        "SELECIONE_BANCO": "Selecione o Banco",
+        "SELECIONE_TIPO_CARTAO": "Selecione o Tipo do Cartão",
+        "SELECIONE_BANDEIRA_CARTAO": "Selecione a Bandeira do Cartão",
+        "SELECIONE_SUBCATEGORIA": "Selecione uma Subcategoria"
     },
 
     "TEXTOS_MODAL": {
@@ -55,7 +64,9 @@
         "DELETAR_CONFIRMACAO_RECEITA": "Deseja realmente deletar a receita?",
         "ESTORNAR_CONFIRMACAO_RECEITA": "Deseja realmente estornar a receita?",
         "INATIVAR_CONFIRMACAO_CONTA_BANCARIA": "Deseja realmente inativar a conta bancária?",
-        "ATIVAR_CONFIRMACAO_CONTA_BANCARIA": "Deseja realmente ativar a conta bancária?"
+        "ATIVAR_CONFIRMACAO_CONTA_BANCARIA": "Deseja realmente ativar a conta bancária?",
+        "BLOQUEAR_CONFIRMACAO_CARTAO": "Deseja realmente bloquear o cartão?",
+        "DESBLOQUEAR_CONFIRMACAO_CARTAO": "Deseja realmente desbloquear o cartão?"
     },
 
     "NOTIFICACAO": {
@@ -76,7 +87,12 @@
         "CONTA_BANCARIA_CADASTRADA": "Conta Bancária Cadastrada",
         "CONTA_BANCARIA_EDITADA": "Conta Bancária Editada",
         "CONTA_BANCARIA_INATIVAR": "Conta Bancária Inativada",
-        "CONTA_BANCARIA_ATIVAR": "Conta Bancária Ativada"
+        "CONTA_BANCARIA_ATIVAR": "Conta Bancária Ativada",
+
+        "CARTAO_CADASTRADO": "Cartão Cadastrado",
+        "CARTAO_EDITADO": "Cartão Editado",
+        "CARTAO_DESBLOQUEAR": "Cartão Desbloqueado",
+        "CARTAO_BLOQUEAR": "Cartão Bloqueado"
     },
 
     "Moradia": "Moradia",

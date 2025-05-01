@@ -41,7 +41,7 @@ export class EditarContaBancariaComponent {
  
   editar() {
     this.contaBancariaService.editar(this.contaBancaria);
-    this.traducaoNotificacaoService.success('NOTIFICACAO.RECEITA_EDITADA', '');
+    this.traducaoNotificacaoService.success('NOTIFICACAO.CONTA_BANCARIA_EDITADA', '');
   }
 
 }

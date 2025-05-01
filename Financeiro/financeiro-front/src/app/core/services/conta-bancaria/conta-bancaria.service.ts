@@ -4,7 +4,7 @@ import { TraducaoService } from '../translate/traducao.service';
 import { BehaviorSubject } from 'rxjs';
 import { ContaBancaria } from './../../models/conta-bancaria/conta-bancaria.model';
 import { ContaBancariaStatus } from '../../enums/conta-bancaria-status.enum';
-import { FiltroContaBancaria } from '../../models/filtro/filtro-conta-bancaria.model';
+import { FiltroContaBancaria } from '../../models/filtros/filtro-conta-bancaria.model';
 import { ContaBancariaListaDTO } from '../../dtos/conta-bancaria/conta-bancaria-lista.dto';
 import { ContaBancariaMapper } from '../../mappers/conta-bancaria/conta-bancaria.mapper';
 import { ContaBancariaEdicaoDTO } from '../../dtos/conta-bancaria/conta-bancaria-edicao.dto';

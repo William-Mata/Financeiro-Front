@@ -28,7 +28,7 @@
                     </mat-form-field>
 
                     <mat-form-field appearance="fill" class="col-12">
-                        <mat-label>{{'SELECIONE_SUBCATEGORIA' | translate}}</mat-label>
+                        <mat-label>{{'TEXTOS_COMBO.SELECIONE_SUBCATEGORIA' | translate}}</mat-label>
                         <mat-select [(ngModel)]="receita.subcategoria" name="cadastrarSubcategoria" required>
                             <mat-optgroup *ngFor="let categoria of categorias" [label]="categoria.value | translate">
                                 <mat-option *ngFor="let sub of categoria.subcategorias" [value]="sub.value">

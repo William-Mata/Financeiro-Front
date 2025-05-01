@@ -5,7 +5,7 @@ import { provideNgxMask } from 'ngx-mask';
 import { TraducaoNotificacaoService } from '../../../core/services/translate/traducao-notificao.service';
 import { ContaBancariaService } from '../../../core/services/conta-bancaria/conta-bancaria.service';
 import { ContaBancariaListaDTO } from '../../../core/dtos/conta-bancaria/conta-bancaria-lista.dto';
-import { FiltroContaBancaria } from '../../../core/models/filtro/filtro-conta-bancaria.model';
+import { FiltroContaBancaria } from '../../../core/models/filtros/filtro-conta-bancaria.model';
 
 @Component({
   selector: 'app-consultar-conta-bancaria',

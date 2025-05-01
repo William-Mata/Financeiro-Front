@@ -1,8 +1,8 @@
 <div class="col-12 p-3 bg-opacity-25 bg-degrade border border-secondary rounded shadown my-3">
-    <h2>{{'CONTA_BANCARIA' | translate}}</h2>
+    <h2>{{'CARTAO' | translate}}</h2>
     <hr>
     
-    <form class="row g-3" (ngSubmit)="consultar();" #formConsultarReceita="ngForm">
+    <form class="row g-3" (ngSubmit)="consultar();" #formConsultarCartao="ngForm">
         <mat-form-field class="col-4">
             <mat-label>{{ 'Id' | translate}}</mat-label>
             <input matInput type="number" placeholder="1" [(ngModel)]="filtro.id" name="consultarDescricao">
@@ -10,7 +10,7 @@
 
         <mat-form-field class="col-4">
             <mat-label>{{ 'DESCRICAO' | translate}}</mat-label>
-            <input matInput type="text" placeholder="conta" [(ngModel)]="filtro.descricao" name="consultarDescricao">
+            <input matInput type="text" placeholder="cartao" [(ngModel)]="filtro.descricao" name="consultarDescricao">
         </mat-form-field>
 
         <hr/>
@@ -29,7 +29,7 @@
 </div>
 
 
-<div class="col-12 table-responsive p-3 bg-opacity-25 border border-secondary rounded shadown m-0" *ngIf="contaBancarias.length > 0">
+<div class="col-12 table-responsive p-3 bg-opacity-25 border border-secondary rounded shadown m-0" *ngIf="cartoes.length > 0">
     <table class="table table-dark table-striped table-hover table-bordered align-middle">
         <thead >
             <tr>
@@ -38,13 +38,14 @@
                 <th>{{ 'DESCRICAO' | translate }}</th>
                 <th>{{ 'STATUS' | translate }}</th>
                 <th>{{ 'TIPO' | translate }}</th>
-                <th>{{ 'BANCO' | translate }}</th>
-                <th>{{ 'SALDO_INICIAL' | translate }}</th>
-                <th>{{ 'SALDO_ATUAL' | translate }}</th>
+                <th>{{ 'BANDEIRA' | translate }}</th>
+                <th>{{ 'DIA_FECHAMENTO_FATURA' | translate }}</th>
+                <th>{{ 'LIMITE_TOTAL_ATUAL' | translate }}</th>
+                <th>{{ 'LIMITE_DISPONIVEL' | translate }}</th>
             </tr>
         </thead>
         <tbody class="table-group-divider">
-            <tr *ngFor="let item of contaBancarias">
+            <tr *ngFor="let item of cartoes">
                 <td>
                     <button mat-mini-fab [matMenuTriggerFor]="menu">
                         <mat-icon>menu</mat-icon>
@@ -54,27 +55,28 @@
                             <i class="fa-solid fa-pen-to-square me-1"></i>
                             {{'EDITAR' | translate}}
                         </button>
-                        <button *ngIf="item.status === 'Ativa'" mat-menu-item (click)="enviarAlterarStatus(item.id ?? 0)" data-bs-toggle="modal" data-bs-target="#modalAlterarStatus" >
+                        <button *ngIf="item.status === 'Desbloqueado'" mat-menu-item (click)="enviarAlterarStatus(item.id ?? 0)" data-bs-toggle="modal" data-bs-target="#modalAlterarStatus" >
                             <i class="fa fa-ban"></i>
-                            {{'INATIVAR' | translate}}
+                            {{'BLOQUEAR' | translate}}
                         </button>
-                        <button *ngIf="item.status === 'Inativa'" mat-menu-item (click)="enviarAlterarStatus(item.id ?? 0)" data-bs-toggle="modal" data-bs-target="#modalAlterarStatus" >
+                        <button *ngIf="item.status === 'Bloqueado'" mat-menu-item (click)="enviarAlterarStatus(item.id ?? 0)" data-bs-toggle="modal" data-bs-target="#modalAlterarStatus" >
                             <i class="fa fa-check-circle"></i>
-                            {{'ATIVAR' | translate}}
+                            {{'DESBLOQUEAR' | translate}}
                         </button>
                     </mat-menu>
                 </td>
                 <td>{{item.id}}</td>
                 <td>{{item.descricao}}</td>
                 <td>
-                    <span class="badge rounded-pill p-2" ngClass="{{item.status  === 'Inativa' ? 'bg-danger' : 'bg-success'}}">
+                    <span class="badge rounded-pill p-2" ngClass="{{item.status  === 'Bloqueado' ? 'bg-danger' : 'bg-success'}}">
                         {{item.status  ?? '' | translate}}
                     </span>
                 </td>
                 <td>{{item.tipo ?? '' | translate}}</td>
-                <td>{{item.banco ?? '' | translate}}</td>
-                <td>{{item.saldoInicial}}</td>
-                <td>{{item.saldoAtual}}</td>
+                <td>{{item.bandeira ?? '' | translate}}</td>
+                <td>{{item.diaFechamentoFatura}}</td>
+                <td>{{item.limiteTotalAtual}}</td>
+                <td>{{item.limiteDisponivel}}</td>
             </tr>
         </tbody>
         <tfoot>

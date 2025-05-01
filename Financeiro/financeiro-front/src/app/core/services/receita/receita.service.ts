@@ -6,7 +6,7 @@ import { Receita } from '../../models/receita/receita.model';
 import { ReceitaListaDTO } from '../../dtos/receita/receita-lista.dto';
 import { ReceitaEdicaoDTO } from '../../dtos/receita/receita-edicao.dto';
 import { ReceitaRecebimentoDTO } from '../../dtos/receita/receita-recebimento.dto';
-import { FiltroReceita } from '../../models/filtro/filtro-receita.model';
+import { FiltroReceita } from '../../models/filtros/filtro-receita.model';
 import { TransacaoStatus } from '../../enums/transacao-status.enum';
 import { ReceitaMapper } from '../../mappers/receita/receita.mapper';
 

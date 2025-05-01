@@ -6,7 +6,7 @@ import { Despesa } from '../../models/despesa/despesa.model';
 import { DespesaListaDTO } from '../../dtos/despesa/despesa-lista.dto';
 import { DespesaEdicaoDTO } from '../../dtos/despesa/despesa-edicao.dto';
 import { DespesaPagamentoDTO } from './../../dtos/despesa/despesa-pagamento.dto';
-import { FiltroDespesa } from './../../models/filtro/filtro-despesa.model';
+import { FiltroDespesa } from '../../models/filtros/filtro-despesa.model';
 import { TransacaoStatus } from '../../enums/transacao-status.enum';
 import { DespesaMapper } from '../../mappers/despesa/despesa.mapper';
 

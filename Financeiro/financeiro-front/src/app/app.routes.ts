@@ -4,6 +4,7 @@ import { DespesaComponent } from './pages/despesa/despesa.component';
 import { LoginComponent } from './pages/login/login.component';
 import { ReceitaComponent } from './pages/receita/receita.component';
 import { ContaBancariaComponent } from './pages/conta-bancaria/conta-bancaria.component';
+import { CartaoComponent } from './pages/cartao/cartao.component';
 
 export const routes: Routes = [
     { path: 'login', component: LoginComponent},
@@ -11,6 +12,7 @@ export const routes: Routes = [
     { path: 'despesa', component: DespesaComponent },
     { path: 'receita', component: ReceitaComponent },
     { path: 'conta-bancaria', component: ContaBancariaComponent },
+    { path: 'cartao', component: CartaoComponent },
     { path: '',   redirectTo: '/login', pathMatch: 'full' },
     // { path: '**', component: PageNotFoundComponent }
 ];

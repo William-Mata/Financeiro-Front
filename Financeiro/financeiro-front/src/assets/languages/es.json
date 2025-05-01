@@ -5,6 +5,7 @@
     "DESPESA": "Gasto",
     "RECEITA": "Ingreso",
     "CONTA_BANCARIA": "Cuenta Bancaria",
+    "CARTAO": "Tarjeta",
     "PERFIL": "Perfil",
     "MUDAR_TEMA": "Cambiar Tema",
     "SAIR": "Salir",
@@ -23,15 +24,20 @@
     "SALDO_ATUAL": "Saldo Actual",
     "TIPO": "Tipo",
     "BANCO": "Banco",
-
-    "SELECIONE_SUBCATEGORIA": "Seleccione una Subcategoría",
+    "DIA_FECHAMENTO_FATURA": "Invoice Closing Day",
+    "LIMITE_TOTAL_INICIAL": "Initial Total Limit",
+    "LIMITE_TOTAL_ATUAL": "Current Total Limit",
+    "LIMITE_DISPONIVEL": "Available Limit",
+    "BANDEIRA": "Brand",
 
     "CADASTRAR": "Registrar",
     "SALVAR": "Guardar",
     "EDITAR": "Editar",
     "DELETAR": "Eliminar",
     "INATIVAR": "Desactivar",
-     "ATIVAR": "Activar",
+    "ATIVAR": "Activar",
+    "BLOQUEAR": "Bloquear",
+    "DESBLOQUEAR": "Desbloquear",
     "CANCELAR": "Cancelar",
     "PAGAR": "Pagar",
     "RECEBER": "Recibir",
@@ -46,7 +52,10 @@
 
     "TEXTOS_COMBO": {
         "SELECIONE_TIPO_CONTA": "Seleccione el Tipo de Cuenta",
-        "SELECIONE_BANCO": "Seleccione el Banco"
+        "SELECIONE_BANCO": "Seleccione el Banco",
+        "SELECIONE_TIPO_CARTAO": "Seleccione el Tipo de Tarjeta",
+        "SELECIONE_BANDEIRA_CARTAO": "Seleccione la Marca de la Tarjeta",
+        "SELECIONE_SUBCATEGORIA": "Select a Subcategory"
     },
     
     "TEXTOS_MODAL": {
@@ -55,7 +64,9 @@
         "DELETAR_CONFIRMACAO_RECEITA": "¿Realmente desea eliminar el ingreso?",
         "ESTORNAR_CONFIRMACAO_RECEITA": "¿Realmente desea revertir el ingreso?",
         "INATIVAR_CONFIRMACAO_CONTA_BANCARIA": "¿Realmente desea desactivar la cuenta bancaria?",
-        "ATIVAR_CONFIRMACAO_CONTA_BANCARIA": "¿Realmente desea activar la cuenta bancaria?"
+        "ATIVAR_CONFIRMACAO_CONTA_BANCARIA": "¿Realmente desea activar la cuenta bancaria?",
+        "BLOQUEAR_CONFIRMACAO_CARTAO": "¿Realmente desea bloquear la tarjeta?",
+        "DESBLOQUEAR_CONFIRMACAO_CARTAO": "¿Realmente desea desbloquear la tarjeta?"
     },
 
     "NOTIFICACAO": {
@@ -76,7 +87,12 @@
         "CONTA_BANCARIA_CADASTRADA": "Cuenta Bancaria Registrada",
         "CONTA_BANCARIA_EDITADA": "Cuenta Bancaria Editada",
         "CONTA_BANCARIA_INATIVAR": "Cuenta Bancaria Desactivada",
-        "CONTA_BANCARIA_ATIVAR": "Cuenta Bancaria Activada"
+        "CONTA_BANCARIA_ATIVAR": "Cuenta Bancaria Activada",
+        
+        "CARTAO_CADASTRADO": "Tarjeta Registrada",
+        "CARTAO_EDITADO": "Tarjeta Editada",
+        "CARTAO_INATIVAR": "Tarjeta Inactivada",
+        "CARTAO_ATIVAR": "Tarjeta Activada"
     },
 
     "Moradia": "Vivienda",

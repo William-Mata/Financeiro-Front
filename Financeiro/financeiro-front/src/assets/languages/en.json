@@ -5,6 +5,7 @@
     "DESPESA": "Expense",
     "RECEITA": "Income",
     "CONTA_BANCARIA": "Bank Account",
+    "CARTAO": "Card",
     "PERFIL": "Profile",
     "MUDAR_TEMA": "Change Theme",
     "SAIR": "Logout",
@@ -23,8 +24,11 @@
     "SALDO_ATUAL": "Current Balance",
     "TIPO": "Type",
     "BANCO": "Bank",
-
-    "SELECIONE_SUBCATEGORIA": "Select a Subcategory",
+    "DIA_FECHAMENTO_FATURA": "Día de Cierre de la Factura",
+    "LIMITE_TOTAL_INICIAL": "Límite Total Inicial",
+    "LIMITE_TOTAL_ATUAL": "Límite Total Actual",
+    "LIMITE_DISPONIVEL": "Límite Disponible",
+    "BANDEIRA": "Marca",
 
     "CADASTRAR": "Register",
     "SALVAR": "Save",
@@ -32,6 +36,8 @@
     "DELETAR": "Delete",
     "INATIVAR": "Deactivate",
     "ATIVAR": "Activate",
+    "BLOQUEAR": "Block",
+    "DESBLOQUEAR": "Unlock",
     "CANCELAR": "Cancel",
     "PAGAR": "Pay",
     "RECEBER": "Receive",
@@ -46,7 +52,10 @@
 
     "TEXTOS_COMBO": {
         "SELECIONE_TIPO_CONTA": "Select Account Type",
-        "SELECIONE_BANCO": "Select Bank"
+        "SELECIONE_BANCO": "Select Bank",
+        "SELECIONE_TIPO_CARTAO": "Select the Card Type",
+        "SELECIONE_BANDEIRA_CARTAO": "Select the Card Brand",
+        "SELECIONE_SUBCATEGORIA": "Select a Subcategory"
     },
 
     "TEXTOS_MODAL": {
@@ -55,7 +64,9 @@
         "DELETAR_CONFIRMACAO_RECEITA": "Do you really want to delete the income?",
         "ESTORNAR_CONFIRMACAO_RECEITA": "Do you really want to reverse the income?",
         "INATIVAR_CONFIRMACAO_CONTA_BANCARIA": "Do you really want to deactivate the bank account?",
-        "ATIVAR_CONFIRMACAO_CONTA_BANCARIA": "Do you really want to activate the bank account?"
+        "ATIVAR_CONFIRMACAO_CONTA_BANCARIA": "Do you really want to activate the bank account?",
+        "BLOQUEAR_CONFIRMACAO_CARTAO": "Do you really want to block the card?",
+        "DESBLOQUEAR_CONFIRMACAO_CARTAO": "Do you really want to unlock the card?"
     },
 
     "NOTIFICACAO": {
@@ -76,7 +87,12 @@
         "CONTA_BANCARIA_CADASTRADA": "Registered Bank Account",
         "CONTA_BANCARIA_EDITADA": "Edited Bank Account",
         "CONTA_BANCARIA_INATIVAR": "Bank Account Deactivated",
-        "CONTA_BANCARIA_ATIVAR": "Bank Account Activated"
+        "CONTA_BANCARIA_ATIVAR": "Bank Account Activated",
+
+        "CARTAO_CADASTRADO": "Card Registered",
+        "CARTAO_EDITADO": "Card Edited",
+        "CARTAO_INATIVAR": "Card Deactivated",
+        "CARTAO_ATIVAR": "Card Activated"
     },
 
     "Moradia": "Housing",

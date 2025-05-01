@@ -1,4 +1,4 @@
-import { FiltroReceita } from '../../../core/models/filtro/filtro-receita.model';
+import { FiltroReceita } from '../../../core/models/filtros/filtro-receita.model';
 import { Component, EventEmitter, Output } from '@angular/core';
 import { ImportacaoPadrao } from '../../../shared/imports/importacao.padrao.shared';
 import { ReceitaListaDTO } from '../../../core/dtos/receita/receita-lista.dto';

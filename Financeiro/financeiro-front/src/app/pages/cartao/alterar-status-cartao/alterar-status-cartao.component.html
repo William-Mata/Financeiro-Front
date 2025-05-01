@@ -1,0 +1,37 @@
+<div class="modal fade modal-lg" id="modalAlterarStatus" aria-hidden="true" aria-labelledby="modalAlterarStatus" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="alterarStatusCartaoLabel">
+                    <span *ngIf="this.cartao.status === 'Desbloqueado'">{{ 'BLOQUEAR' | translate}}</span> 
+                    <span *ngIf="this.cartao.status === 'Bloqueado'">{{ 'DESBLOQUEAR' | translate}}</span> 
+                    {{ 'CARTAO' | translate}}
+                </h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form class="row g-3" (ngSubmit)="alterarStatus();" #formAlterarStatusCartao="ngForm">
+                    <div class="col-12">
+                        <h5 *ngIf="this.cartao.status === 'Desbloqueado'">{{'TEXTOS_MODAL.BLOQUEAR_CONFIRMACAO_CARTAO' | translate}}</h5>
+                        <h5 *ngIf="this.cartao.status === 'Bloqueado'">{{'TEXTOS_MODAL.DESBLOQUEAR_CONFIRMACAO_CARTAO' | translate}}</h5>
+                    </div>
+                    <hr/>
+                    <div class="col-12">
+                        <button *ngIf="this.cartao.status === 'Desbloqueado'" class="btn btn-danger p-2 mx-1 rounded-pill" type="submit" data-bs-toggle="modal" data-bs-dismiss="#modalAlterarStatus">
+                            <i class="fa fa-ban"></i>
+                            {{ 'BLOQUEAR' | translate}}
+                        </button>
+                        <button *ngIf="this.cartao.status === 'Bloqueado'" class="btn btn-success p-2 mx-1 rounded-pill" type="submit" data-bs-toggle="modal" data-bs-dismiss="#modalAlterarStatus">
+                            <i class="fa fa-check-circle"></i> 
+                            {{ 'DESBLOQUEAR' | translate}}
+                        </button>
+                        <button class="btn btn-secondary p-2 mx-1 rounded-pill" type="button" data-bs-toggle="modal" data-bs-dismiss="#modalAlterarStatus">
+                            <i class="fa-solid fa-xmark ms-1"></i>
+                            {{ 'CANCELAR' | translate}}
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
