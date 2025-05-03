@@ -27,11 +27,9 @@ export class TraducaoService {
         this.alterarTextos();
     }
 
-    alterarIdioma() {
-        this.translate.onLangChange.subscribe(() => {
-            this.translate.use(this.buscarIdiomaAtual());
-            this.alterarTextos();
-        });
+    alterarIdioma(idioma: string) {
+        this.translate.use(idioma);
+        this.alterarTextos();
     }
     
     buscarIdiomaAtual() { 

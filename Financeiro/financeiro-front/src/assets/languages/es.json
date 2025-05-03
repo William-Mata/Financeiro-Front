@@ -24,11 +24,12 @@
     "SALDO_ATUAL": "Saldo Actual",
     "TIPO": "Tipo",
     "BANCO": "Banco",
-    "DIA_FECHAMENTO_FATURA": "Invoice Closing Day",
-    "LIMITE_TOTAL_INICIAL": "Initial Total Limit",
-    "LIMITE_TOTAL_ATUAL": "Current Total Limit",
-    "LIMITE_DISPONIVEL": "Available Limit",
-    "BANDEIRA": "Brand",
+    "DIA_FECHAMENTO_FATURA": "Día de Cierre de la Factura",
+    "LIMITE_TOTAL_INICIAL": "Límite Total Inicial",
+    "LIMITE_TOTAL_ATUAL": "Límite Total Actual",
+    "LIMITE_DISPONIVEL": "Límite Disponible",
+    "BANDEIRA": "Marca",
+
 
     "CADASTRAR": "Registrar",
     "SALVAR": "Guardar",
@@ -55,7 +56,11 @@
         "SELECIONE_BANCO": "Seleccione el Banco",
         "SELECIONE_TIPO_CARTAO": "Seleccione el Tipo de Tarjeta",
         "SELECIONE_BANDEIRA_CARTAO": "Seleccione la Marca de la Tarjeta",
-        "SELECIONE_SUBCATEGORIA": "Select a Subcategory"
+        "SELECIONE_SUBCATEGORIA": "Seleccione una Subcategoría",
+        "SELECIONE_CONTA_BANCARIA": "Seleccione una Cuenta Bancaria",
+        "SELECIONE_CARTAO": "Seleccione una Tarjeta",
+        "SELECIONE_FORMA_PAGAMENTO": "Seleccione el Método de Pago",
+        "SELECIONE_FORMA_RECEBIMENTO": "Seleccione el Método de Recepción"
     },
     
     "TEXTOS_MODAL": {
