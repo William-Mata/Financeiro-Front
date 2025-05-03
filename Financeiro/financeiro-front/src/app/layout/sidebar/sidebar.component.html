@@ -24,9 +24,44 @@
         <mat-icon fontIcon="account_balance"></mat-icon>
       </a>
     </li>
+    <li>
+      <a class="nav-link py-3 border-bottom rounded-0"  data-bs-toggle="tooltip" data-bs-placement="right" title="{{'CARTAO' | translate }}" routerLink="/cartao" routerLinkActive="active">
+        <mat-icon fontIcon="credit_card"></mat-icon>
+      </a>
+    </li>
   </ul>
+  <div class="border-top">
+    <a class="d-flex align-items-center justify-content-center p-3 link-body-emphasis text-decoration-none" style="cursor: pointer;" (click)="alterarTema()" data-bs-toggle="tooltip" data-bs-placement="right" title="{{'MUDAR_TEMA' | translate }}">
+      <mat-icon fontIcon="brightness_medium"></mat-icon>
+    </a>
+  </div>
+  <div class="dropdown  dropdown-s border-top">
+    <a id="dropdownLanguage" class="d-flex align-items-center justify-content-center p-3 link-body-emphasis text-decoration-none dropdown-toggle"
+       style="cursor: pointer;" data-bs-toggle="dropdown" aria-expanded="false" data-bs-placement="right" title="{{'MUDAR_TEMA' | translate}}">
+       <img *ngIf="idiomaAtual == 'pt'" src="../../../assets/img/paises/brasil.png" alt="Brasil" width="32" height="32">
+       <img *ngIf="idiomaAtual == 'es'" src="../../../assets/img/paises/espanha.png" alt="Espanha" width="32" height="32">
+       <img *ngIf="idiomaAtual == 'en'" src="../../../assets/img/paises/eua.png" alt="Espanha" width="32" height="32">
+    </a>
+    <ul class="dropdown-menu text-small shadow" style="min-width: 40px;" aria-labelledby="dropdownLanguage">
+      <li>
+        <a class="dropdown-item" style="cursor: pointer;" (click)="alterarIdioma('pt')">
+          <img src="../../../assets/img/paises/brasil.png" alt="Brasil" width="32" height="32">
+        </a>
+      </li>
+      <li>
+        <a class="dropdown-item" style="cursor: pointer;" (click)="alterarIdioma('es')">
+          <img src="../../../assets/img/paises/espanha.png" alt="Espanha" width="32" height="32">
+        </a>
+      </li>
+      <li>
+        <a class="dropdown-item" style="cursor: pointer;" (click)="alterarIdioma('en')">
+          <img src="../../../assets/img/paises/eua.png" alt="Espanha" width="32" height="32">
+        </a>
+      </li>
+    </ul>
+  </div>
   <div class="dropdown border-top">
-    <a class="d-flex align-items-center justify-content-center p-3 link-body-emphasis text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+    <a class="d-flex align-items-center justify-content-center p-3 link-body-emphasis text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" style="cursor: pointer;"> 
       <img src="https://avatars.githubusercontent.com/u/50085652?v=4" alt="William" width="24" height="24" class="rounded-circle me-2">
     </a>
     <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser1">
@@ -37,12 +72,7 @@
         </a>
       </li>
       <li><hr class="dropdown-divider"></li>
-      <li>
-        <a class="dropdown-item" style="cursor: pointer;" (click)="alterarTema()">
-          <i class="fas fa-adjust me-2"></i>
-          <span class="ms-2" *ngIf="!isExpandido">{{'MUDAR_TEMA' | translate}}</span>
-        </a>
-      </li>
+    
       <li>
         <a class="dropdown-item" href="#">
           <i class="fa fa-arrow-left rounded-circle me-2"></i>

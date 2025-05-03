@@ -55,7 +55,11 @@
         "SELECIONE_BANCO": "Selecione o Banco",
         "SELECIONE_TIPO_CARTAO": "Selecione o Tipo do Cartão",
         "SELECIONE_BANDEIRA_CARTAO": "Selecione a Bandeira do Cartão",
-        "SELECIONE_SUBCATEGORIA": "Selecione uma Subcategoria"
+        "SELECIONE_SUBCATEGORIA": "Selecione uma Subcategoria",
+        "SELECIONE_CONTA_BANCARIA": "Selecione uma Conta Bancária",
+        "SELECIONE_CARTAO": "Selecione um Cartão",
+        "SELECIONE_FORMA_PAGAMENTO": "Selecione a Forma de Pagamento",
+        "SELECIONE_FORMA_RECEBIMENTO": "Selecione a Forma de Recebimento"
     },
 
     "TEXTOS_MODAL": {

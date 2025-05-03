@@ -24,12 +24,12 @@
     "SALDO_ATUAL": "Current Balance",
     "TIPO": "Type",
     "BANCO": "Bank",
-    "DIA_FECHAMENTO_FATURA": "Día de Cierre de la Factura",
-    "LIMITE_TOTAL_INICIAL": "Límite Total Inicial",
-    "LIMITE_TOTAL_ATUAL": "Límite Total Actual",
-    "LIMITE_DISPONIVEL": "Límite Disponible",
-    "BANDEIRA": "Marca",
-
+    "DIA_FECHAMENTO_FATURA": "Invoice Closing Day",
+    "LIMITE_TOTAL_INICIAL": "Initial Total Limit",
+    "LIMITE_TOTAL_ATUAL": "Current Total Limit",
+    "LIMITE_DISPONIVEL": "Available Limit",
+    "BANDEIRA": "Brand",
+    
     "CADASTRAR": "Register",
     "SALVAR": "Save",
     "EDITAR": "Edit",
@@ -55,7 +55,11 @@
         "SELECIONE_BANCO": "Select Bank",
         "SELECIONE_TIPO_CARTAO": "Select the Card Type",
         "SELECIONE_BANDEIRA_CARTAO": "Select the Card Brand",
-        "SELECIONE_SUBCATEGORIA": "Select a Subcategory"
+        "SELECIONE_SUBCATEGORIA": "Select a Subcategory",
+        "SELECIONE_CONTA_BANCARIA": "Select a Bank Account",
+        "SELECIONE_CARTAO": "Select a Card",
+        "SELECIONE_FORMA_PAGAMENTO": "Select a Payment Method",
+        "SELECIONE_FORMA_RECEBIMENTO": "Select a Receiving Method"
     },
 
     "TEXTOS_MODAL": {
