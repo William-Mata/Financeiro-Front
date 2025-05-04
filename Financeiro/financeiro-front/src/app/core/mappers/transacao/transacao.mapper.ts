@@ -15,6 +15,7 @@ export class TransacaoMapper {
                       t.valor?.toLocaleString(locale, { style: "currency", currency}),
                       t.tipoTransacao,
                       t.dataTransacao?.toLocaleDateString(locale),
+                      t.contaBancaria?.descricao,
                       t.isEstorno)
                 );
   }

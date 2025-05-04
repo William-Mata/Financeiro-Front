@@ -10,12 +10,13 @@ export class TransacaoListaDTO {
     valor?: string;
     tipoTransacao?: TransacaoTipo;
     dataTransacao?: string;
+    contaBancaria?: string;
     isEstorno?: boolean;
     idTransacaoEstorno?: number
     
     constructor(id?: number, idDespesa?: number, idReceita?: number, formaPagamento?: string, 
                 formaRecebimento?: string, valor?: string, tipoTransacao?: TransacaoTipo, 
-                dataTransacao?: string, isEstorno?: boolean) {
+                dataTransacao?: string, contaBancaria?: string ,isEstorno?: boolean) {
 
         this.id = id;
         this.idDespesa = idDespesa;
@@ -25,6 +26,7 @@ export class TransacaoListaDTO {
         this.valor = valor;
         this.tipoTransacao = tipoTransacao;
         this.dataTransacao = dataTransacao;
+        this.contaBancaria = contaBancaria;
         this.isEstorno = isEstorno;
     }
 }

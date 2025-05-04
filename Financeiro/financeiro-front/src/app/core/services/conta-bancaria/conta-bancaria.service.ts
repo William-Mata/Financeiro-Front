@@ -64,8 +64,6 @@ export class ContaBancariaService {
   }
 
   listarContaBancarias(filtro: FiltroContaBancaria): ContaBancariaListaDTO[] {
-    this.contaBancarias$.subscribe(d => this.contaBancarias = d);
-    
     const contaBancariaFiltradas = this.filtrarContaBancarias(filtro);
     return ContaBancariaMapper.mapperContaBancariaListaDTO(contaBancariaFiltradas, this.locale, this.currency);
   }

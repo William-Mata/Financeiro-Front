@@ -35,7 +35,7 @@
                         <mat-label>{{'TEXTOS_COMBO.SELECIONE_FORMA_PAGAMENTO' | translate}}</mat-label>
                         <mat-select [(ngModel)]="despesa.formaPagamento" name="pagarFormaPagamento" required>
                             <mat-option *ngFor="let forma of formasPagamentos" [value]="forma.label">
-                                {{ forma.label }}
+                                {{ 'FORMAS_PAGAMENTO_RECEBIMENTO.' + forma.label?.toUpperCase()  | translate }}
                             </mat-option>
                         </mat-select>
                     </mat-form-field>

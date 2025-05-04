@@ -12,8 +12,8 @@ export class Transacao {
     valor?: number;
     tipoTransacao?: TransacaoTipo;
     dataTransacao?: Date;
-    ContaBancaria?: ContaBancaria;
-    Cartao?: Cartao;
+    contaBancaria?: ContaBancaria;
+    cartao?: Cartao;
     isEstorno?: boolean;
     idTransacaoEstorno?: number;
 
@@ -30,8 +30,8 @@ export class Transacao {
         this.valor = valor;
         this.tipoTransacao = tipoTransacao;
         this.dataTransacao = dataTransacao;
-        this.ContaBancaria = contaBancaria;
-        this.Cartao = cartao;
+        this.contaBancaria = contaBancaria;
+        this.cartao = cartao;
         this.isEstorno = isEstorno;
     }
 }

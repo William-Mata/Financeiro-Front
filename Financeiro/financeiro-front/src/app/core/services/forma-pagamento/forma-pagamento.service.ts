@@ -11,7 +11,7 @@ export class FormaPagamentoService {
         {label: "Cartão de Crédito"},
         {label: "Cartão de Débito"},
         {label: "Dinheiro"},
-        {label: "Trasferência Bancária"},
+        {label: "Transferência Bancária"},
         {label: "PIX"},
     ]
 

@@ -95,8 +95,6 @@ export class DespesaService {
   }
 
   listarDespesas(filtro: FiltroDespesa): DespesaListaDTO[] {
-    this.despesas$.subscribe(d => this.despesas = d);
-    
     const despesaFiltradas = this.filtrarDespesas(filtro);
     return DespesaMapper.mapperDespesaListaDTO(despesaFiltradas, this.locale, this.currency);
   }

@@ -76,8 +76,6 @@ export class CartaoService {
   }
 
   listarCartoes(filtro: FiltroCartao): CartaoListaDTO[] {
-    this.cartoes$.subscribe(d => this.cartoes = d);
-    
     const cartaoFiltradas = this.filtrarCartoes(filtro);
     return CartaoMapper.mapperCartaoListaDTO(cartaoFiltradas, this.locale, this.currency);
   }

@@ -8,6 +8,7 @@ import { ReceitaRecebimentoDTO } from '../../dtos/receita/receita-recebimento.dt
 import { TransacaoListaDTO } from '../../dtos/transacao/transacao-lista.dto';
 import { TransacaoMapper } from '../../mappers/transacao/transacao.mapper';
 import { ContaBancariaService } from '../conta-bancaria/conta-bancaria.service';
+import { FiltroTransacao } from './../../models/filtros/filtro-transacao.model';
 
 @Injectable({
   providedIn: 'root'
@@ -85,28 +86,61 @@ export class TransacaoService {
                                   transacaoEstorno.valor,
                                   TransacaoTipo.Estorno,
                                   new Date(),
-                                  transacaoEstorno.ContaBancaria,
-                                  transacaoEstorno.Cartao,
+                                  transacaoEstorno.contaBancaria,
+                                  transacaoEstorno.cartao,
                                   true);
 
     transacaoEstorno.idTransacaoEstorno = transacao.id;
     this.transacoes.push(transacao);
     this.transacoesSubject.next(this.transacoes);
 
-    if(transacaoEstorno.ContaBancaria && transacaoEstorno.tipoTransacao === TransacaoTipo.Despesa){
-      this.contaBancariaService.acrescentarSaldo(transacaoEstorno.ContaBancaria, transacaoEstorno.valor!);
+    if(transacaoEstorno.contaBancaria && transacaoEstorno.tipoTransacao === TransacaoTipo.Despesa){
+      this.contaBancariaService.acrescentarSaldo(transacaoEstorno.contaBancaria, transacaoEstorno.valor!);
     }
-    else if(transacaoEstorno.Cartao && transacaoEstorno.tipoTransacao === TransacaoTipo.Despesa){
-      this.contaBancariaService.acrescentarSaldo(transacaoEstorno.Cartao, transacaoEstorno.valor!);
+    else if(transacaoEstorno.cartao && transacaoEstorno.tipoTransacao === TransacaoTipo.Despesa){
+      this.contaBancariaService.acrescentarSaldo(transacaoEstorno.cartao, transacaoEstorno.valor!);
     }
-    else if(transacaoEstorno.ContaBancaria && transacaoEstorno.tipoTransacao === TransacaoTipo.Receita){
-      this.contaBancariaService.descontarSaldo(transacaoEstorno.ContaBancaria, transacaoEstorno.valor!);
+    else if(transacaoEstorno.contaBancaria && transacaoEstorno.tipoTransacao === TransacaoTipo.Receita){
+      this.contaBancariaService.descontarSaldo(transacaoEstorno.contaBancaria, transacaoEstorno.valor!);
     }
   }
 
-  listarTransacoes(): TransacaoListaDTO[] {
-    this.transacoes$.subscribe(d => this.transacoes = d);
-    return TransacaoMapper.mapperTransacaoListaDTO(this.transacoes, this.locale, this.currency);
+  listarTransacoes(filtro : FiltroTransacao): TransacaoListaDTO[] {
+    const transacoesFiltradas = this.filtrarTransacoes(filtro);
+    return TransacaoMapper.mapperTransacaoListaDTO(transacoesFiltradas, this.locale, this.currency);
   }
 
+  private filtrarTransacoes(filtro: FiltroTransacao): Transacao[] {
+      let transacoesFiltrada = this.transacoes.filter(transacao => {
+  
+        if(filtro.id && transacao.id !== filtro.id) {
+          return false;
+        }
+  
+        if(filtro.valor && (!transacao.valor || transacao.valor !== filtro.valor)) {
+          return false;
+        }
+  
+        return true;
+      })
+      
+      console.log("filtro");
+      return this.ordernarTransacoes(transacoesFiltrada, filtro);
+    }
+
+    private ordernarTransacoes(transacoes: Transacao[], filtro: FiltroTransacao): Transacao[] {
+      const quantidadePorPagina = filtro.quantidadePorPagina ?? 10;
+      const paginaAtual = filtro.paginaAtual && filtro.paginaAtual > 0 ? filtro.paginaAtual : 1;
+      const skip = (paginaAtual - 1) * quantidadePorPagina;
+
+      const ordenadas = transacoes.sort((a, b) => {
+        if (filtro.ordenarPor === 'id') {
+          return filtro.ordenarDesc ? a.id! - b.id! : b.id! - a.id!  ;
+        }
+        return 0;
+      });
+    
+      return ordenadas.slice(skip, skip + quantidadePorPagina);
+   
+    }
 }

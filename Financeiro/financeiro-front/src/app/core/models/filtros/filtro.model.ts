@@ -5,6 +5,7 @@ export class Filtro {
     paginaAtual?: number;
     quantidadePorPagina?: number;
     ordenarPor?: string;
+    ordenarDesc?: boolean;
 
     reset() {
         this.id = undefined;
@@ -13,5 +14,6 @@ export class Filtro {
         this.paginaAtual = undefined;
         this.quantidadePorPagina = undefined;
         this.ordenarPor = undefined;
+        this.ordenarDesc = undefined;
     }
 }

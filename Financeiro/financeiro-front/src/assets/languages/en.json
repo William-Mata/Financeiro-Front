@@ -29,6 +29,7 @@
     "LIMITE_TOTAL_ATUAL": "Current Total Limit",
     "LIMITE_DISPONIVEL": "Available Limit",
     "BANDEIRA": "Brand",
+      "DATA_TRANSACAO": "Transaction Date",
     
     "CADASTRAR": "Register",
     "SALVAR": "Save",
@@ -46,9 +47,19 @@
     "CONSULTAR": "Search",
     "LIMPAR_FILTROS": "Clear Filters",
     
-    "Pendente": "Pending",
-    "Pago": "Paid",
-    "Vencido": "Overdue",
+    "PENDENTE": "Pending",
+    "PAGO": "Paid",
+    "VENCIDO": "Overdue",
+    "RECEBIDO": "Received",
+
+    "FORMAS_PAGAMENTO_RECEBIMENTO": {
+        "BOLETO": "Bank Slip",
+        "CARTÃO DE CRÉDITO": "Credit Card",
+        "CARTÃO DE DÉBITO": "Debit Card",
+        "DINHEIRO": "Cash",
+        "TRANSFERÊNCIA BANCÁRIA": "Bank Transfer",
+        "PIX": "PIX"
+    },
 
     "TEXTOS_COMBO": {
         "SELECIONE_TIPO_CONTA": "Select Account Type",

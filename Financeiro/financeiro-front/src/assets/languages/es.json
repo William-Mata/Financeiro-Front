@@ -29,7 +29,7 @@
     "LIMITE_TOTAL_ATUAL": "Límite Total Actual",
     "LIMITE_DISPONIVEL": "Límite Disponible",
     "BANDEIRA": "Marca",
-
+    "DATA_TRANSACAO": "Fecha de Transacción",
 
     "CADASTRAR": "Registrar",
     "SALVAR": "Guardar",
@@ -47,9 +47,19 @@
     "CONSULTAR": "Consultar",
     "LIMPAR_FILTROS": "Limpiar Filtros",
 
-    "Pendente": "Pendiente",
-    "Pago": "Pagado",
-    "Vencido": "Vencido",
+    "PENDENTE": "Pendiente",
+    "PAGO": "Pagado",
+    "VENCIDO": "Vencido",
+    "RECEBIDO": "Recibido",
+
+    "FORMAS_PAGAMENTO_RECEBIMENTO": {
+      "BOLETO": "Boleto Bancario",
+      "CARTÃO DE CRÉDITO": "Tarjeta de Crédito",
+      "CARTÃO DE DÉBITO": "Tarjeta de Débito",
+      "DINHEIRO": "Efectivo",
+      "TRANSFERÊNCIA BANCÁRIA": "Transferencia Bancaria",
+      "PIX": "PIX"
+    },
 
     "TEXTOS_COMBO": {
         "SELECIONE_TIPO_CONTA": "Seleccione el Tipo de Cuenta",

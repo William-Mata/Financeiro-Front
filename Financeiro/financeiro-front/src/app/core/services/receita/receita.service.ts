@@ -94,8 +94,6 @@ export class ReceitaService {
   }
 
   listarReceitas(filtro: FiltroReceita): ReceitaListaDTO[] {
-    this.receitas$.subscribe(d => this.receitas = d);
-    
     const receitaFiltradas = this.filtrarReceitas(filtro);
     return ReceitaMapper.mapperReceitaListaDTO(receitaFiltradas, this.locale, this.currency);
   }
