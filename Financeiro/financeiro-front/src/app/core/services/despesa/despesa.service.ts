@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { TransacaoService } from './../transacao/transacao.service';
 import { CategoriaService } from '../categoria/categoria.service';
 import { TraducaoService } from '../translate/traducao.service';
 import { BehaviorSubject } from 'rxjs';
@@ -22,7 +23,9 @@ export class DespesaService {
   
   despesas$ = this.despesasSubject.asObservable();
 
-  constructor(private categoriaService: CategoriaService, private traducaoService: TraducaoService) {
+  constructor(private categoriaService: CategoriaService, private traducaoService: TraducaoService,
+              private transacaoService: TransacaoService) 
+  {
       this.locale = this.traducaoService.buscarLocal();
       this.currency =  this.locale === 'en-US' ? 'USD' : this.locale === 'es-ES' ? 'ARS' : 'BRL';
       this.despesas.push(new Despesa(1, 'teste',  100, 0, new Date(), undefined, 'teste', 'teste', "Pendente"));
@@ -63,6 +66,8 @@ export class DespesaService {
       const despesa = this.despesas.find(d => d.id === despesaPagamento.id);
       
       if (despesa) {
+        despesa.transacao = this.transacaoService.pagar(despesaPagamento);
+        
         despesa.status = TransacaoStatus.Pago;
         despesa.dataPagamento = despesaPagamento.dataPagamento;
         despesa.valorPago = despesaPagamento.valorPago;
@@ -76,6 +81,12 @@ export class DespesaService {
     const despesa = this.despesas.find(d => d.id === id);
 
     if (despesa) {
+      
+      if(despesa.transacao) {
+        this.transacaoService.estornar(despesa.transacao);
+        despesa.transacao = undefined;
+      }
+
       despesa.status = TransacaoStatus.Pendente;
       despesa.dataPagamento = undefined;
       despesa.valorPago = undefined;

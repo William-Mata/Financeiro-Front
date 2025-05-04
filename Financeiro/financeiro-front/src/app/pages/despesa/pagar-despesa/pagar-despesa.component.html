@@ -21,6 +21,25 @@
                         <mat-datepicker #picker disabled="false"></mat-datepicker>
                     </mat-form-field>
 
+
+                    <mat-form-field appearance="fill" class="col-12">
+                        <mat-label>{{'TEXTOS_COMBO.SELECIONE_CONTA_BANCARIA' | translate}}</mat-label>
+                        <mat-select [(ngModel)]="despesa.contaBancaria" name="pagarContaBancaria" required>
+                            <mat-option *ngFor="let conta of contasBancarias" [value]="conta">
+                                {{ conta.descricao }}
+                            </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+
+                    <mat-form-field appearance="fill" class="col-12">
+                        <mat-label>{{'TEXTOS_COMBO.SELECIONE_FORMA_PAGAMENTO' | translate}}</mat-label>
+                        <mat-select [(ngModel)]="despesa.formaPagamento" name="pagarFormaPagamento" required>
+                            <mat-option *ngFor="let forma of formasPagamentos" [value]="forma.label">
+                                {{ forma.label }}
+                            </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+
                     <hr/>
                     <div class="col-12">
                         <button class="btn btn-success p-2 mx-1 rounded-pill" type="submit" [disabled]="formPagarDespesa.invalid" data-bs-toggle="modal" data-bs-dismiss="#modalPagar">

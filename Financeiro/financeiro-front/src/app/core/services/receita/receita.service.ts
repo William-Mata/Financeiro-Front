@@ -9,6 +9,7 @@ import { ReceitaRecebimentoDTO } from '../../dtos/receita/receita-recebimento.dt
 import { FiltroReceita } from '../../models/filtros/filtro-receita.model';
 import { TransacaoStatus } from '../../enums/transacao-status.enum';
 import { ReceitaMapper } from '../../mappers/receita/receita.mapper';
+import { TransacaoService } from '../transacao/transacao.service';
 
 @Injectable({
   providedIn: 'root'
@@ -22,7 +23,9 @@ export class ReceitaService {
   
   receitas$ = this.receitasSubject.asObservable();
 
-  constructor(private categoriaService: CategoriaService, private traducaoService: TraducaoService) {
+  constructor(private categoriaService: CategoriaService, private traducaoService: TraducaoService,
+              private transacaoService: TransacaoService) 
+  {
       this.locale = this.traducaoService.buscarLocal();
       this.currency =  this.locale === 'en-US' ? 'USD' : this.locale === 'es-ES' ? 'ARS' : 'BRL';
       this.receitas.push(new Receita(1, 'teste',  100, 0, new Date(), undefined, 'teste', 'teste', "Pendente"));
@@ -63,6 +66,8 @@ export class ReceitaService {
       const receita = this.receitas.find(d => d.id === receitaRecebimento.id);
       
       if (receita) {
+        receita.transacao = this.transacaoService.receber(receitaRecebimento);
+
         receita.status = TransacaoStatus.Recebido;
         receita.dataRecebimento = receitaRecebimento.dataRecebimento;
         receita.valorRecebido = receitaRecebimento.valorRecebido;
@@ -76,6 +81,11 @@ export class ReceitaService {
     const receita = this.receitas.find(d => d.id === id);
 
     if (receita) {
+      if(receita.transacao){
+        this.transacaoService.estornar(receita.transacao);
+        receita.transacao = undefined;
+      }
+
       receita.status = TransacaoStatus.Pendente;
       receita.dataRecebimento = undefined;
       receita.valorRecebido = undefined;

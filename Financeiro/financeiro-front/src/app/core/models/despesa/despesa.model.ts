@@ -1,3 +1,4 @@
+import { Transacao } from './../transacao/transacao.model';
 export class Despesa {
 
     id?: number;
@@ -9,6 +10,7 @@ export class Despesa {
     categoria?: string; 
     subcategoria?: string;
     status?: string; 
+    transacao?: Transacao;
 
     constructor(id?: number, descricao?: string, valor?: number, valorPago?: number, 
                 dataVencimento?: Date, dataPagamento?: Date, 

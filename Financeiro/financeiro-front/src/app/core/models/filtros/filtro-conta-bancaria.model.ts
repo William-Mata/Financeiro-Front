@@ -6,6 +6,14 @@ export class FiltroContaBancaria extends Filtro {
     status?: string; 
     tipo?: string; 
 
+    constructor(status?: string, tipo?: string, banco?: string) {
+        super();
+
+        this.status = status;
+        this.tipo = tipo;
+        this.banco = banco;
+    }
+
     override reset() {
         super.reset(); 
         

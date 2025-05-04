@@ -21,6 +21,24 @@
                         <mat-datepicker #picker disabled="false"></mat-datepicker>
                     </mat-form-field>
 
+                    <mat-form-field appearance="fill" class="col-12">
+                        <mat-label>{{'TEXTOS_COMBO.SELECIONE_CONTA_BANCARIA' | translate}}</mat-label>
+                        <mat-select [(ngModel)]="receita.contaBancaria" name="receberContaBancaria" required>
+                            <mat-option *ngFor="let conta of contasBancarias" [value]="conta">
+                                {{ conta.descricao }}
+                            </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+
+                    <mat-form-field appearance="fill" class="col-12">
+                        <mat-label>{{'TEXTOS_COMBO.SELECIONE_FORMA_RECEBIMENTO' | translate}}</mat-label>
+                        <mat-select [(ngModel)]="receita.formaRecebimento" name="receberFormaRecebimento" required>
+                            <mat-option *ngFor="let forma of formasRecebimentos" [value]="forma.label">
+                                {{ forma.label }}
+                            </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+
                     <hr/>
                     <div class="col-12">
                         <button class="btn btn-success p-2 mx-1 rounded-pill" type="submit" [disabled]="formReceberReceita.invalid" data-bs-toggle="modal" data-bs-dismiss="#modalReceber">

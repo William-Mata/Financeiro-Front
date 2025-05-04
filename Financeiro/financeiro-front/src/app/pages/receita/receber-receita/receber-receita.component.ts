@@ -1,10 +1,14 @@
-import { ReceitaRecebimentoDTO } from '../../../core/dtos/receita/receita-recebimento.dto';
 import { Component, Input } from '@angular/core';
 import { ImportacaoPadrao } from '../../../shared/imports/importacao.padrao.shared';
 import { ImportacaoFormulario } from '../../../shared/imports/importacao.formulario.shared';
 import { ReceitaService } from '../../../core/services/receita/receita.service';
 import { NgxMaskDirective, provideNgxMask } from 'ngx-mask';
 import { TraducaoNotificacaoService } from '../../../core/services/translate/traducao-notificao.service';
+import { ContaBancariaService } from '../../../core/services/conta-bancaria/conta-bancaria.service';
+import { FiltroContaBancaria } from '../../../core/models/filtros/filtro-conta-bancaria.model';
+import { ContaBancariaListaDTO } from './../../../core/dtos/conta-bancaria/conta-bancaria-lista.dto';
+import { FormaRecebimentoService } from './../../../core/services/forma-recebimento/forma-recibimento.service';
+import { ReceitaRecebimentoDTO } from '../../../core/dtos/receita/receita-recebimento.dto';
 
 @Component({
   selector: 'app-receber-receita',
@@ -21,8 +25,15 @@ import { TraducaoNotificacaoService } from '../../../core/services/translate/tra
 export class ReceberReceitaComponent {
   @Input() idReceber: number | undefined;
   receita: ReceitaRecebimentoDTO = new ReceitaRecebimentoDTO();
+  formasRecebimentos: any[] = [];
+  contasBancarias: ContaBancariaListaDTO[] = [];
 
-  constructor(private receitaService: ReceitaService, private traducaoNotificacaoService: TraducaoNotificacaoService) {}
+  constructor(private receitaService: ReceitaService, private traducaoNotificacaoService: TraducaoNotificacaoService,
+              private contaBancariaService : ContaBancariaService, private formaRecebimentoService: FormaRecebimentoService)
+  {
+    this.formasRecebimentos = this.formaRecebimentoService.listarFormasRecebimentos();
+    this.contasBancarias = this.contaBancariaService.listarContaBancarias(new FiltroContaBancaria("Ativa",  undefined, undefined));
+  }
 
   receber(){
     if(this.idReceber && this.idReceber > 0) {

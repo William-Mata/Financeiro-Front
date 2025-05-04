@@ -1,10 +1,14 @@
-import { DespesaPagamentoDTO } from './../../../core/dtos/despesa/despesa-pagamento.dto';
+import { FormaPagamentoService } from './../../../core/services/forma-pagamento/forma-pagamento.service';
+import { ContaBancariaService } from './../../../core/services/conta-bancaria/conta-bancaria.service';
 import { Component, Input } from '@angular/core';
 import { ImportacaoPadrao } from '../../../shared/imports/importacao.padrao.shared';
 import { ImportacaoFormulario } from '../../../shared/imports/importacao.formulario.shared';
-import { DespesaService } from '../../../core/services/despesa/despesa.service';
 import { NgxMaskDirective, provideNgxMask } from 'ngx-mask';
 import { TraducaoNotificacaoService } from '../../../core/services/translate/traducao-notificao.service';
+import { DespesaService } from '../../../core/services/despesa/despesa.service';
+import { DespesaPagamentoDTO } from './../../../core/dtos/despesa/despesa-pagamento.dto';
+import { ContaBancariaListaDTO } from '../../../core/dtos/conta-bancaria/conta-bancaria-lista.dto';
+import { FiltroContaBancaria } from '../../../core/models/filtros/filtro-conta-bancaria.model';
 
 @Component({
   selector: 'app-pagar-despesa',
@@ -21,8 +25,15 @@ import { TraducaoNotificacaoService } from '../../../core/services/translate/tra
 export class PagarDespesaComponent {
   @Input() idPagar: number | undefined;
   despesa: DespesaPagamentoDTO = new DespesaPagamentoDTO();
+  formasPagamentos: any[] = [];
+  contasBancarias: ContaBancariaListaDTO[] = [];
 
-  constructor(private despesaService: DespesaService, private traducaoNotificacaoService: TraducaoNotificacaoService) {}
+  constructor(private despesaService: DespesaService, private traducaoNotificacaoService: TraducaoNotificacaoService,
+              private contaBancariaService: ContaBancariaService, private formaPagamentoService: FormaPagamentoService) 
+  {
+    this.formasPagamentos = this.formaPagamentoService.listarFormasPagamentos();
+    this.contasBancarias = this.contaBancariaService.listarContaBancarias(new FiltroContaBancaria("Ativa", undefined, undefined));
+  }
 
   pagar(){
     if(this.idPagar && this.idPagar > 0) {
