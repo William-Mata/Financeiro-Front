@@ -26,17 +26,17 @@ export class ConsultarCartaoComponent {
   filtro: FiltroCartao = new FiltroCartao();
 
   constructor(private cartaoService: CartaoService, private traducaoNotificacaoService: TraducaoNotificacaoService) {
-    this.cartoes = this.cartaoService.listCartoesDTO(this.filtro);
+    this.cartoes = this.cartaoService.listarCartoes(this.filtro);
   }
   
   ngOnInit(){
     this.cartaoService
     .cartoes$.subscribe(() => 
-      this.cartoes = this.cartaoService.listCartoesDTO(this.filtro));
+      this.cartoes = this.cartaoService.listarCartoes(this.filtro));
   }
   
   consultar(){
-    this.cartoes = this.cartaoService.listCartoesDTO(this.filtro);
+    this.cartoes = this.cartaoService.listarCartoes(this.filtro);
     this.traducaoNotificacaoService.success('NOTIFICACAO.CONSULTA_REALIZADA', '');
   }
 

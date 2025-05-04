@@ -63,7 +63,7 @@ export class ContaBancariaService {
     this.contaBancariasSubject.next(this.contaBancarias);
   }
 
-  listContaBancariasDTO(filtro: FiltroContaBancaria): ContaBancariaListaDTO[] {
+  listarContaBancarias(filtro: FiltroContaBancaria): ContaBancariaListaDTO[] {
     this.contaBancarias$.subscribe(d => this.contaBancarias = d);
     
     const contaBancariaFiltradas = this.filtrarContaBancarias(filtro);
@@ -108,5 +108,21 @@ export class ContaBancariaService {
 
       return true;
     });
+  }
+
+  descontarSaldo(contaBancaria: ContaBancaria, valor: number) {
+    const index = this.contaBancarias.findIndex(d => d.id === contaBancaria.id);
+
+    if(this.contaBancarias[index]) {
+      this.contaBancarias[index].saldoAtual! -= valor;
+    }
+  }
+
+  acrescentarSaldo(contaBancaria: ContaBancaria, valor: number) {
+    const index = this.contaBancarias.findIndex(d => d.id === contaBancaria.id);
+
+    if(this.contaBancarias[index]) {
+      this.contaBancarias[index].saldoAtual! += valor;
+    }
   }
 }

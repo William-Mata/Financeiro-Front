@@ -29,17 +29,17 @@ export class ConsultarDespesaComponent {
   filtro: FiltroDespesa = new FiltroDespesa();
 
   constructor(private despesaService: DespesaService, private traducaoNotificacaoService: TraducaoNotificacaoService) {
-    this.despesas = this.despesaService.listDespesasDTO(this.filtro);
+    this.despesas = this.despesaService.listarDespesas(this.filtro);
   }
   
   ngOnInit(){
     this.despesaService
     .despesas$.subscribe(() => 
-      this.despesas = this.despesaService.listDespesasDTO(this.filtro));
+      this.despesas = this.despesaService.listarDespesas(this.filtro));
   }
   
   consultar(){
-    this.despesas = this.despesaService.listDespesasDTO(this.filtro);
+    this.despesas = this.despesaService.listarDespesas(this.filtro);
     this.traducaoNotificacaoService.success('NOTIFICACAO.CONSULTA_REALIZADA', '');
   }
 

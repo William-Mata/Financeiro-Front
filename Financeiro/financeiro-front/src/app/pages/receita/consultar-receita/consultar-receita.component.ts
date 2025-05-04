@@ -29,17 +29,17 @@ export class ConsultarReceitaComponent {
   filtro: FiltroReceita = new FiltroReceita();
 
   constructor(private receitaService: ReceitaService, private traducaoNotificacaoService: TraducaoNotificacaoService) {
-    this.receitas = this.receitaService.listReceitasDTO(this.filtro);
+    this.receitas = this.receitaService.listarReceitas(this.filtro);
   }
   
   ngOnInit(){
     this.receitaService
     .receitas$.subscribe(() => 
-      this.receitas = this.receitaService.listReceitasDTO(this.filtro));
+      this.receitas = this.receitaService.listarReceitas(this.filtro));
   }
   
   consultar(){
-    this.receitas = this.receitaService.listReceitasDTO(this.filtro);
+    this.receitas = this.receitaService.listarReceitas(this.filtro);
     this.traducaoNotificacaoService.success('NOTIFICACAO.CONSULTA_REALIZADA', '');
   }
 

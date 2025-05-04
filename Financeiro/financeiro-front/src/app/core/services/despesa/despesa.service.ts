@@ -83,7 +83,7 @@ export class DespesaService {
     }
   }
 
-  listDespesasDTO(filtro: FiltroDespesa): DespesaListaDTO[] {
+  listarDespesas(filtro: FiltroDespesa): DespesaListaDTO[] {
     this.despesas$.subscribe(d => this.despesas = d);
     
     const despesaFiltradas = this.filtrarDespesas(filtro);

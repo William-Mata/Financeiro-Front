@@ -75,7 +75,7 @@ export class CartaoService {
     this.cartoesSubject.next(this.cartoes);
   }
 
-  listCartoesDTO(filtro: FiltroCartao): CartaoListaDTO[] {
+  listarCartoes(filtro: FiltroCartao): CartaoListaDTO[] {
     this.cartoes$.subscribe(d => this.cartoes = d);
     
     const cartaoFiltradas = this.filtrarCartoes(filtro);

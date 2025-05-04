@@ -26,17 +26,17 @@ export class ConsultarContaBancariaComponent {
   filtro: FiltroContaBancaria = new FiltroContaBancaria();
 
   constructor(private contaBancariaService: ContaBancariaService, private traducaoNotificacaoService: TraducaoNotificacaoService) {
-    this.contaBancarias = this.contaBancariaService.listContaBancariasDTO(this.filtro);
+    this.contaBancarias = this.contaBancariaService.listarContaBancarias(this.filtro);
   }
   
   ngOnInit(){
     this.contaBancariaService
     .contaBancarias$.subscribe(() => 
-      this.contaBancarias = this.contaBancariaService.listContaBancariasDTO(this.filtro));
+      this.contaBancarias = this.contaBancariaService.listarContaBancarias(this.filtro));
   }
   
   consultar(){
-    this.contaBancarias = this.contaBancariaService.listContaBancariasDTO(this.filtro);
+    this.contaBancarias = this.contaBancariaService.listarContaBancarias(this.filtro);
     this.traducaoNotificacaoService.success('NOTIFICACAO.CONSULTA_REALIZADA', '');
   }
 

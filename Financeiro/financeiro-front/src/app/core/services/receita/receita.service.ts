@@ -83,7 +83,7 @@ export class ReceitaService {
     }
   }
 
-  listReceitasDTO(filtro: FiltroReceita): ReceitaListaDTO[] {
+  listarReceitas(filtro: FiltroReceita): ReceitaListaDTO[] {
     this.receitas$.subscribe(d => this.receitas = d);
     
     const receitaFiltradas = this.filtrarReceitas(filtro);
