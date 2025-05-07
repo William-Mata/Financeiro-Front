@@ -1,0 +1,20 @@
+<div class="g-opacity-25 border border-secondary rounded shadown m-0">
+    <h4 class="text-center my-2">{{'DASHBOARD_TEXTOS.RECEITA_CATEGORIA' | translate}}</h4>
+    
+    <ngx-charts-pie-chart
+        [view]="view"
+        [scheme]="'forest'"
+        [results]="dados"
+        [gradient]="false"
+        [legend]="true"
+        legendTitle=""
+        [labels]="false"
+        [doughnut]="false"
+        [explodeSlices]="false"
+        (select)="onSelect($event)"
+        (activate)="onActivate($event)"
+        (deactivate)="onDeactivate($event)"
+        [tooltipText]="formatarTooltip"
+        [animations]="true">
+    </ngx-charts-pie-chart>
+</div>      

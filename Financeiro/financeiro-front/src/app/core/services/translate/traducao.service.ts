@@ -52,6 +52,12 @@ export class TraducaoService {
         return browserLang && this.idiomasDisponiveis.includes(browserLang) ? browserLang : this.idiomaPadrao;
     }
 
+    formatarMoedaPorIdioma(valor: number): string { 
+        let locale = this.buscarLocal();
+        let currency =  locale === 'en-US' ? 'USD' : locale === 'es-ES' ? 'ARS' : 'BRL';
+        return valor.toLocaleString(locale, { style: "currency", currency})
+    }
+
     private alterarTextos() {
         this.alterarTitulo();
         this.setLocaleParaDataPicker();

@@ -51,6 +51,7 @@
     "PAGO": "Paid",
     "VENCIDO": "Overdue",
     "RECEBIDO": "Received",
+    "ESTORNO": "Reversal",
 
     "FORMAS_PAGAMENTO_RECEBIMENTO": {
         "BOLETO": "Bank Slip",
@@ -59,6 +60,11 @@
         "DINHEIRO": "Cash",
         "TRANSFERÊNCIA BANCÁRIA": "Bank Transfer",
         "PIX": "PIX"
+    },
+
+    "DASHBOARD_TEXTOS": {
+      "DESPESA_CATEGORIA": "Expense by Category",
+      "RECEITA_CATEGORIA": "Income by Category"
     },
 
     "TEXTOS_COMBO": {

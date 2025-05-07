@@ -51,6 +51,7 @@
     "PAGO": "Pago",
     "VENCIDO": "Vencido",
     "RECEBIDO": "Recebido",
+    "ESTORNO": "Estorno",
 
     "FORMAS_PAGAMENTO_RECEBIMENTO": {
         "BOLETO": "Boleto",
@@ -59,6 +60,11 @@
         "DINHEIRO": "Dinheiro",
         "TRANSFERÊNCIA BANCÁRIA": "Transferência Bancária",
         "PIX": "PIX"
+    },
+
+    "DASHBOARD_TEXTOS":{
+        "DESPESA_CATEGORIA": "Despesa por Categoria",
+        "RECEITA_CATEGORIA": "Receita por Categoria"
     },
 
     "TEXTOS_COMBO": {

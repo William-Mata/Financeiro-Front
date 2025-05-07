@@ -124,7 +124,6 @@ export class TransacaoService {
         return true;
       })
       
-      console.log("filtro");
       return this.ordernarTransacoes(transacoesFiltrada, filtro);
     }
 
@@ -141,6 +140,5 @@ export class TransacaoService {
       });
     
       return ordenadas.slice(skip, skip + quantidadePorPagina);
-   
     }
 }

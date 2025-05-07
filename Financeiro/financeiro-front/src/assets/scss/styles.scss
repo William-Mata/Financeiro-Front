@@ -110,9 +110,6 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     z-index: 1055 !important;
 }
 
-// .bg-degrade{
-//     background: linear-gradient(to bottom, rgb(255, 115, 0), rgb(128, 0, 128)); 
-// }
 
 .toast-top-center {
     top: 10px !important; /* Altere o valor conforme quiser */
@@ -120,4 +117,36 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 td, th, tr {
     text-align: center;
+}
+
+.chart-legend ul {
+    margin-top: 0.5rem !important;
+    margin-left: -3.7rem !important;
+    width: 190% !important;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #0d6efd; 
+    border-radius: 10px;
+    border: 2px solid #f1f1f1; 
+}
+
+.ngx-charts-tooltip-content {
+    font-size: 12px !important;
+    font-weight: 500 !important;
+    color: #ffffff !important;
+    padding: 0.3rem !important;
+}
+
+.ngx-charts-tooltip-content p {
+    font-size: 14px !important;
+    margin-bottom: 0px !important;
 }

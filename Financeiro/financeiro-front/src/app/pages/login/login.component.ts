@@ -15,8 +15,6 @@ export class LoginComponent {
   senha?: string;
 
   logar(){
-    console.log(this.login);
-    console.log(this.senha);
   }
 
 }

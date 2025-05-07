@@ -10,6 +10,7 @@ import { FiltroReceita } from '../../models/filtros/filtro-receita.model';
 import { TransacaoStatus } from '../../enums/transacao-status.enum';
 import { ReceitaMapper } from '../../mappers/receita/receita.mapper';
 import { TransacaoService } from '../transacao/transacao.service';
+import { GraficoDTO } from '../../dtos/grafico/grafico.dto';
 
 @Injectable({
   providedIn: 'root'
