@@ -42,6 +42,15 @@ export class DashboardDespesaCategoriaComponent {
     return `${model?.data?.label} <p>${this.traducaoService.formatarMoedaPorIdioma(model.value)}</p>`;
   };
 
+  formatarValor = (valor: number): string => {
+    let formatter = new Intl.NumberFormat('ILS', {
+      style: 'currency',
+      currency: 'BRL'
+    });
+
+    return formatter.format(valor)
+  };
+
 
   onResize() {
     if (this.isBrowser) {

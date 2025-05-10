@@ -2,15 +2,16 @@ import { Component } from '@angular/core';
 import { DashboardTransacoesComponent } from "./dashboard-transacoes/dashboard-transacoes.component";
 import { DashboardDespesaCategoriaComponent } from "./dashboard-despesa-categoria/dashboard-despesa-categoria.component";
 import { DashboardReceitaCategoriaComponent } from "./dashboard-receita-categoria/dashboard-receita-categoria.component";
-
+import { DashBoardResumoFinanciasComponent } from './dashboard-resumo-financias/dashboard-resumo-financias.component';
 
 @Component({
   selector: 'app-dashboard',
   imports: [
-    DashboardTransacoesComponent, 
+    DashboardTransacoesComponent,
     DashboardDespesaCategoriaComponent,
-    DashboardReceitaCategoriaComponent
-  ],
+    DashboardReceitaCategoriaComponent,
+    DashBoardResumoFinanciasComponent
+],
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.scss'
 })

@@ -1,11 +1,11 @@
 <div class="g-opacity-25 border border-secondary rounded shadown m-0">
-    <h4 class="text-center my-2">{{'DASHBOARD_TEXTOS.RECEITA_CATEGORIA' | translate}}</h4>
+    <h4 class="m-3">{{'DASHBOARD_TEXTOS.RECEITA_CATEGORIA' | translate}}</h4>
     
     <ngx-charts-pie-chart
         [view]="view"
         [scheme]="'forest'"
         [results]="dados"
-        [gradient]="false"
+        [gradient]="true"
         [legend]="true"
         legendTitle=""
         [labels]="false"

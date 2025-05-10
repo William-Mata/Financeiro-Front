@@ -36,11 +36,16 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 }
 
 .light-theme {
-    background-color: #ffffff;
+    background-color:#E6E6E6;
     color: #000000 !important;
-
-    a {
-        color: #000000 !important;
+      
+    a, .legend-label-text, .legend-title-text {
+        color:  #000000 !important;
+    }
+ 
+    .textDataLabel,  g.tick text {
+        fill:  #000000;
+        font-weight: bold;
     }
 
     table {
@@ -74,8 +79,13 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     background-color: #343a40;
     color: #ffffff !important;
     
-    a {
+    a, .legend-label-text, .legend-title-text {
         color: #ffffff !important;
+    }
+ 
+    .textDataLabel,  g.tick text {
+        fill: #ffffff; /* Cor preta */
+        font-weight: bold;
     }
 
     table {
@@ -120,7 +130,7 @@ td, th, tr {
 }
 
 .chart-legend ul {
-    margin-top: 0.5rem !important;
+    margin-top: -0.3rem !important;
     margin-left: -3.7rem !important;
     width: 190% !important;
 }

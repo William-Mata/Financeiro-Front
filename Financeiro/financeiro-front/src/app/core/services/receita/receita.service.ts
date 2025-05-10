@@ -29,7 +29,7 @@ export class ReceitaService {
   {
       this.locale = this.traducaoService.buscarLocal();
       this.currency =  this.locale === 'en-US' ? 'USD' : this.locale === 'es-ES' ? 'ARS' : 'BRL';
-      this.receitas.push(new Receita(1, 'teste',  100, 0, new Date(), undefined, 'teste', 'teste', "Pendente"));
+      this.receitas.push(new Receita(1, 'teste',  150, 0, new Date(), undefined, 'teste', 'teste', "Pendente"));
       this.receitasSubject.next(this.receitas);
   }
 

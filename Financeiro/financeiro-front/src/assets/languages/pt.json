@@ -64,7 +64,10 @@
 
     "DASHBOARD_TEXTOS":{
         "DESPESA_CATEGORIA": "Despesa por Categoria",
-        "RECEITA_CATEGORIA": "Receita por Categoria"
+        "RECEITA_CATEGORIA": "Receita por Categoria",
+        "FLUXO_CAIXA": "Fluxo de Caixa",
+        "ULTIMAS_TRANSACOES": "Últimas Transações",
+        "SALDO_PREVISTO": "Saldo Previsto"
     },
 
     "TEXTOS_COMBO": {

@@ -9,7 +9,7 @@ import { DateAdapter } from '@angular/material/core';
 
 export class TraducaoService {
 
-    private translate: TranslateService
+    translate: TranslateService
     private idiomaPadrao : string = 'pt';
     public idiomasDisponiveis : string[] = ['pt', 'en', 'es'];
 
@@ -52,7 +52,7 @@ export class TraducaoService {
         return browserLang && this.idiomasDisponiveis.includes(browserLang) ? browserLang : this.idiomaPadrao;
     }
 
-    formatarMoedaPorIdioma(valor: number): string { 
+    formatarMoedaPorIdioma(valor: number | string): string { 
         let locale = this.buscarLocal();
         let currency =  locale === 'en-US' ? 'USD' : locale === 'es-ES' ? 'ARS' : 'BRL';
         return valor.toLocaleString(locale, { style: "currency", currency})
