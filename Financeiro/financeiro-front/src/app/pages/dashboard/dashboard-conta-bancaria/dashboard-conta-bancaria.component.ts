@@ -6,23 +6,28 @@ import { GraficoDTO } from '../../../core/dtos/grafico/grafico.dto';
 import { DashBoardService } from '../../../core/services/dashboard/dashboard.service';
 import { TraducaoService } from '../../../core/services/translate/traducao.service';
 import { ImportacaoPadrao } from '../../../shared/imports/importacao.padrao.shared';
+import { C } from '@angular/cdk/keycodes';
 
 @Component({
-  selector: 'app-dashboard-despesa-categoria',
-  imports: [
-      NgxChartsModule,
-      ImportacaoPadrao
-    ],
-  templateUrl: './dashboard-despesa-categoria.component.html',
-  styleUrls: ['./dashboard-despesa-categoria.component.scss'],
+  selector: 'app-dashboard-conta-bancaria',
+  imports: [ImportacaoPadrao,
+           NgxChartsModule],
+  templateUrl: './dashboard-conta-bancaria.component.html',
+  styleUrl: './dashboard-conta-bancaria.component.scss'
 })
 
-export class DashboardDespesaCategoriaComponent {
+export class DashboardContaBancariaComponent {
+
   private platformId = inject(PLATFORM_ID);
   private isBrowser = isPlatformBrowser(this.platformId);
 
   dados: GraficoDTO[] = [];
-  view: [number, number] = [450, 205]; 
+  view: [number, number] = [650, 300]; 
+
+ colorScheme = {
+    domain: ['#5AA454', '#E44D25', '#CFC0BB', '#7aa3e5', '#a8385d', '#aae3f5']
+  };
+
 
   constructor(private dashBoardService: DashBoardService, private traducaoService: TraducaoService) {
     if (this.isBrowser) {
@@ -34,21 +39,27 @@ export class DashboardDespesaCategoriaComponent {
   }
 
   private async buscarDados() {
-    let dados = await this.dashBoardService.listarDespesasPorSubcatergoarias();
+    let dados = await this.dashBoardService.listarContaBancarias();
     Object.assign(this, { dados });
   }
 
-  formatarTooltip = (model: any): string => {
-    return `${model?.data?.label} <p>${this.traducaoService.formatarMoedaPorIdioma(model.value)}</p>`;
+ formatarValorAxios = (valor: number): string => {
+    console.log(valor);
+    return this.traducaoService.formatarMoedaPorIdioma(valor);
   };
+
+
+  formatarValor = (valor: any): string => {
+    return `${this.traducaoService.formatarMoedaPorIdioma(valor?? 0)}`;
+  };
+
 
   onResize() {
     if (this.isBrowser) {
-      this.view = [window.innerWidth * 0.3, window.innerHeight * 0.3];
+      this.view = [window.innerWidth * 0.43, window.innerHeight * 0.4];
     }
   }
 
   onSelect(data?: any): void {}
-  onActivate(data?: any): void {}
-  onDeactivate(data?: any): void {}
+
 }

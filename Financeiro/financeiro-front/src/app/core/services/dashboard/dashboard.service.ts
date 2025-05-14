@@ -3,6 +3,7 @@ import { GraficoDTO } from '../../dtos/grafico/grafico.dto';
 import { ReceitaService } from './../receita/receita.service';
 import { DespesaService } from '../despesa/despesa.service';
 import { TraducaoService } from '../translate/traducao.service';
+import { ContaBancariaService } from '../conta-bancaria/conta-bancaria.service';
 
 @Injectable({
   providedIn: 'root'
@@ -10,7 +11,8 @@ import { TraducaoService } from '../translate/traducao.service';
 
 export class DashBoardService {
 
-    constructor(private receitaService: ReceitaService, private despesaService: DespesaService, private traducaoService : TraducaoService) {
+    constructor(private receitaService: ReceitaService, private despesaService: DespesaService, 
+    private traducaoService : TraducaoService, private contaBancariaService: ContaBancariaService) { 
     }
 
     listarReceitasPorSubcatergoarias(): GraficoDTO[] {
@@ -61,6 +63,18 @@ export class DashBoardService {
         dadosGrafico.push( new GraficoDTO(this.traducaoService.translate.instant('RECEITA'), totalReceita));
         dadosGrafico.push( new GraficoDTO(this.traducaoService.translate.instant('DESPESA'), totalDespesas));
         dadosGrafico.push( new GraficoDTO(this.traducaoService.translate.instant('DASHBOARD_TEXTOS.SALDO_PREVISTO'), saldoPrevisto));
+
+        return dadosGrafico;
+    }
+
+    listarContaBancarias(): GraficoDTO[] {
+        let dadosGrafico: GraficoDTO[] = [];
+         
+        this.contaBancariaService.contaBancarias.forEach((c) => {
+            if(c.status === "Ativa"){
+                dadosGrafico.push(new GraficoDTO(c.descricao!, c.saldoAtual!));
+            }
+        })
 
         return dadosGrafico;
     }

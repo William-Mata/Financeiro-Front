@@ -67,7 +67,8 @@
         "RECEITA_CATEGORIA": "Income by Category",
         "FLUXO_CAIXA": "Cash Flow",
         "ULTIMAS_TRANSACOES": "Latest Transactions",
-        "SALDO_PREVISTO": "Projected Balance"
+        "SALDO_PREVISTO": "Projected Balance",
+        "CONTAS_BANCARIAS": "Bank Accounts"
     },
 
     "TEXTOS_COMBO": {

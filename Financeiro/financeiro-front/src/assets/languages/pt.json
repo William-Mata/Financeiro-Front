@@ -67,7 +67,8 @@
         "RECEITA_CATEGORIA": "Receita por Categoria",
         "FLUXO_CAIXA": "Fluxo de Caixa",
         "ULTIMAS_TRANSACOES": "Últimas Transações",
-        "SALDO_PREVISTO": "Saldo Previsto"
+        "SALDO_PREVISTO": "Saldo Previsto",
+        "CONTAS_BANCARIAS": "Contas Bancárias"
     },
 
     "TEXTOS_COMBO": {
