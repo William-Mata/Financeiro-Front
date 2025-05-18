@@ -1,0 +1,16 @@
+<div class="row d-flex flex-column align-items-center vh-100 m-0 px-3"> 
+   
+    <app-consultar-receita (idEditar)="editarReceita($event)" (idDeletar)="deletarReceita($event)"
+        (idReceber)="receberReceita($event)" (idEstornar)="estornarReceita($event)">
+    </app-consultar-receita>
+
+    <app-cadastrar-receita></app-cadastrar-receita>
+
+    <app-deletar-receita *ngIf="this.idDeletar > 0" [idDeletar]="this.idDeletar"></app-deletar-receita>
+
+    <app-editar-receita *ngIf="this.idEditar > 0" [idEditar]="this.idEditar"></app-editar-receita>
+
+    <app-receber-receita *ngIf="this.idReceber > 0" [idReceber]="this.idReceber"></app-receber-receita>
+
+    <app-estornar-receita *ngIf="this.idEstornar > 0" [idEstornar]="this.idEstornar"></app-estornar-receita>
+</div>

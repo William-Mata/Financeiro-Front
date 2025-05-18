@@ -1,18 +1,34 @@
 import { Routes } from '@angular/router';
-import { DashboardComponent } from './pages/dashboard/components/dashboard.component';
-import { DespesaComponent } from './pages/despesa/components/despesa.component';
-import { LoginComponent } from './pages/login/login.component';
-import { ReceitaComponent } from './pages/receita/components/receita.component';
-import { ContaBancariaComponent } from './pages/conta-bancaria/components/conta-bancaria.component';
-import { CartaoComponent } from './pages/cartao/components/cartao.component';
+import { LoginComponent } from './features/login/login.component';
 
 export const routes: Routes = [
-    { path: 'login', component: LoginComponent},
-    { path: 'dashboard', component: DashboardComponent},
-    { path: 'despesa', component: DespesaComponent },
-    { path: 'receita', component: ReceitaComponent },
-    { path: 'conta-bancaria', component: ContaBancariaComponent },
-    { path: 'cartao', component: CartaoComponent },
-    { path: '',   redirectTo: '/login', pathMatch: 'full' },
-    // { path: '**', component: PageNotFoundComponent }
+
+  { 
+    path: '', redirectTo: '/login', pathMatch: 'full' },
+  { 
+    path: 'login', component: LoginComponent },
+  { 
+    path: 'dashboard', 
+    loadChildren: () => import('./features/dashboard/dashboard.routes').then(m => m.DASHBOARD_ROUTES) 
+  },
+  { 
+    path: 'despesa', 
+    loadChildren: () => import('./features/despesa/despesa.routes').then(m => m.DESPESA_ROUTES)
+  },
+  { 
+    path: 'receita', 
+    loadChildren: () => import('./features/receita/receita.routes').then(m => m.RECEITA_ROUTES) 
+  },
+  {
+    path: 'conta-bancaria',
+    loadChildren: () => import('./features/conta-bancaria/conta-bancaria.routes').then(m => m.CONTA_BANCARIA_ROUTES),
+  },
+  {
+    path: 'cartao',
+    loadChildren: () => import('./features/cartao/cartao.routes').then(m => m.CARTAO_ROUTES),
+  },
+  { 
+      path: '**', 
+      loadComponent: () => import('./features/pagina-nao-encontrada/pages/pagina-nao-encontrada.component').then(m => m.PaginaNaoEncontadaComponent) 
+  }
 ];

@@ -1,0 +1,11 @@
+
+<div class="row d-flex align-items-center justify-content-md-center vh-100 m-0 px-3"> 
+    <div class="col-4">
+      <h2>{{ errorMessage() }}</h2>
+      <ul>
+        @for (suggestion of suggestions(); track $index) {
+          <li>{{ suggestion }}</li>
+        }
+      </ul>
+    </div>
+</div>

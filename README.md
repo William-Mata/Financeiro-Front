@@ -32,20 +32,18 @@ Organize seu projeto de forma modular e escalável para garantir eficiência e f
 ```plaintext
 📂 src/
 ├── 📂 app/
-│   ├── 📂 core/         
-│   ├── 📂 shared/      
-│   ├── 📂 features/    
-│   ├── 📂 layout/      
-│   └── 📂 pages/        
+│   ├── 📂 core/    
+|   |── 📂 layout/   
+│   ├── 📂 features/        
+│   └── 📂 shared/           
 ├── 📂 assets/           
 └── 📂 environments/     
 ```  
 
 - **`core/`**: Serviços globais, interceptors, configurações gerais.  
-- **`shared/`**: Componentes, diretivas e pipes reutilizáveis.  
-- **`features/`**: Módulos específicos de funcionalidades.  
+- **`shared/`**: Componentes, diretivas e pipes reutilizáveis.
 - **`layout/`**: Componentes de layout (header, footer, sidebar).  
-- **`pages/`**: Componentes de páginas principais.  
+- **`features/`**: Módulos específicos de funcionalidades.  
 - **`assets/`**: Arquivos estáticos (imagens, fontes, estilos globais).  
 - **`environments/`**: Configurações de ambiente (environment.ts, environment.prod.ts).  
 
@@ -139,14 +137,14 @@ Prepare seu ambiente de desenvolvimento para iniciar o projeto:
     ```bash
     ng generate --help
     ```
-
+<!-- 
 ## <span style="background: linear-gradient(to right, orange, purple); -webkit-background-clip: text; color: transparent;">🧪 **Executando Testes**</span>  
 
 Para executar testes unitários com o [Karma](https://karma-runner.github.io), utilize o seguinte comando:  
 
 ```bash  
 ng test  
-```  
+```   -->
 
 <!-- Para executar testes end-to-end (e2e), utilize o seguinte comando:
 
