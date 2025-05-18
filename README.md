@@ -148,7 +148,7 @@ Para executar testes unitários com o [Karma](https://karma-runner.github.io), u
 ng test  
 ```  
 
-Para executar testes end-to-end (e2e), utilize o seguinte comando:
+<!-- Para executar testes end-to-end (e2e), utilize o seguinte comando:
 
 ```bash
 ng e2e
@@ -160,4 +160,4 @@ Estes comandos executará os testes configurados no projeto e exibirá os result
 
 Para mais informações em como usar o Angular CLI, incluindo detalhes e comandos, acesse a pagina do [Angular CLI ](https://angular.dev/tools/cli).
 
----
+--- -->
