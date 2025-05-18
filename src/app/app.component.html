@@ -1,5 +1,5 @@
 <div class="container-fluid d-flex">
-  <app-sidebar></app-sidebar>
+  <app-sidebar *ngIf="!ocultarSidebar()"></app-sidebar>
   <div class="content flex-grow-1 vh-100">
     <router-outlet></router-outlet>
   </div>

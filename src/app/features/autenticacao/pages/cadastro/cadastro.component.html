@@ -1,0 +1,42 @@
+
+<div class="row d-flex align-items-center justify-content-md-center vh-100 m-0 px-3"> 
+    <div class="col-6 align-items-center container-login">
+        <h1 class="text-center">Cadastro</h1>
+        
+        <form #formLogin="ngForm" (ngSubmit)="cadastro()">
+            <div class="mb-3 from-goup">
+                <label for="" class="form-label">Email</label>
+                <input type="email" class="form-control" [(ngModel)]="login"
+                name="email"  id="email" aria-describedby="emailHelpId"
+                placeholder="financeiro@email.com" required/>
+                <small id="emailHelpId" class="form-text text-muted">
+                    
+                </small>
+            </div>
+            <div class="mb-3 from-goup">
+                <label for="" class="form-label">Senha</label>
+                <input type="password" class="form-control" [(ngModel)]="senha"
+                name="senha" id="senha" aria-describedby="passowordlHelpId"
+                placeholder="********" required/>
+                <small id="passowordlHelpId" class="form-text text-muted">
+                    
+                </small>
+            </div>
+            <div class="mb-3 from-goup">
+                <label for="" class="form-label">Confirmar Senha</label>
+                <input type="password" class="form-control" [(ngModel)]="confirmarSenha"
+                name="confirmarSenha" id="confirmarSenha" aria-describedby="passowordlHelpId"
+                placeholder="********" required/>
+                <small id="passowordlHelpId" class="form-text text-muted">
+                    
+                </small>
+            </div>
+            <div class="mb-3 from-goup text-center mt-4">
+                <button type="submit" [disabled]="formLogin.invalid" id="btn-login"
+                    class="btn btn-primary text-center">
+                    Entrar
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

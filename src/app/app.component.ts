@@ -1,34 +1,42 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { SidebarComponent } from "./layout/sidebar/sidebar.component";
 import { TraducaoService } from './core/services/translate/traducao.service';
-import { Router } from '@angular/router';
+import { Router, NavigationEnd } from '@angular/router';
+import { CommonModule } from '@angular/common';
 
-@Component({   
+@Component({
   standalone: true,
   selector: 'app-root',
   imports: [
     RouterOutlet,
     SidebarComponent,
+    CommonModule,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
-
-export class AppComponent {
+export class AppComponent implements OnInit {
   rotaAtual: string = '';
 
-  constructor(private traducaoService: TraducaoService, Router: Router) {
+  constructor(
+    private traducaoService: TraducaoService, 
+    private router: Router
+  ) {
     this.traducaoService.iniciarTraducao();
-    this.rotaAtual = Router.url
+    
+    this.router.events.subscribe(event => {
+      if (event instanceof NavigationEnd) {
+        this.rotaAtual = event.url;
+      }
+    });
   }
 
   ngOnInit() {
     this.traducaoService.iniciarTraducao();
-    this.ocultarComponentes();
   }
 
-  ocultarComponentes(): boolean {
-    return true;
+  ocultarSidebar(): boolean {
+    return ['/login', '/cadastro', '/recuperar-senha'].includes(this.rotaAtual);
   }
 }
