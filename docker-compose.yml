@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: front-financeiro
+    ports:
+      - "8080:80"
+      # - "443:443"
+    volumes: 
+      # - ./ssl:/etc/nginx/ssl:ro
+      - ./logs:/var/log/nginx
+    environment:
+      - NODE_ENV=production
+    restart: unless-stopped
+    networks:
+      - financeiro-network
+
+networks:
+  financeiro-network:
+    driver: bridge
